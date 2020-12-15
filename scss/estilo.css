@@ -1,185 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
-.nice-select {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: #fff;
-  border-radius: 5px;
-  border: solid 1px #e8e8e8;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  clear: both;
-  cursor: pointer;
-  display: block;
-  float: left;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: normal;
-  height: 42px;
-  line-height: 40px;
-  outline: none;
-  padding-left: 18px;
-  padding-right: 30px;
-  position: relative;
-  text-align: left !important;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  white-space: nowrap;
-  width: auto;
-}
-
-.nice-select:hover {
-  border-color: #dbdbdb;
-}
-
-.nice-select:active, .nice-select.open, .nice-select:focus {
-  border-color: #999;
-}
-
-.nice-select:after {
-  border-bottom: 2px solid #999;
-  border-right: 2px solid #999;
-  content: '';
-  display: block;
-  height: 5px;
-  margin-top: -4px;
-  pointer-events: none;
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  -webkit-transform-origin: 66% 66%;
-          transform-origin: 66% 66%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  width: 5px;
-}
-
-.nice-select.open:after {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-}
-
-.nice-select.open .list {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: scale(1) translateY(0);
-          transform: scale(1) translateY(0);
-}
-
-.nice-select.disabled {
-  border-color: #ededed;
-  color: #999;
-  pointer-events: none;
-}
-
-.nice-select.disabled:after {
-  border-color: #cccccc;
-}
-
-.nice-select.wide {
-  width: 100%;
-}
-
-.nice-select.wide .list {
-  left: 0 !important;
-  right: 0 !important;
-}
-
-.nice-select.right {
-  float: right;
-}
-
-.nice-select.right .list {
-  left: auto;
-  right: 0;
-}
-
-.nice-select.small {
-  font-size: 12px;
-  height: 36px;
-  line-height: 34px;
-}
-
-.nice-select.small:after {
-  height: 4px;
-  width: 4px;
-}
-
-.nice-select.small .option {
-  line-height: 34px;
-  min-height: 34px;
-}
-
-.nice-select .list {
-  background-color: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-          box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-top: 4px;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
-  -webkit-transform: scale(0.75) translateY(-21px);
-          transform: scale(0.75) translateY(-21px);
-  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  z-index: 9;
-}
-
-.nice-select .list:hover .option:not(:hover) {
-  background-color: transparent !important;
-}
-
-.nice-select .option {
-  cursor: pointer;
-  font-weight: 400;
-  line-height: 40px;
-  list-style: none;
-  min-height: 40px;
-  outline: none;
-  padding-left: 18px;
-  padding-right: 29px;
-  text-align: left;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-  background-color: #f6f6f6;
-}
-
-.nice-select .option.selected {
-  font-weight: bold;
-}
-
-.nice-select .option.disabled {
-  background-color: transparent;
-  color: #999;
-  cursor: default;
-}
-
-.no-csspointerevents .nice-select .list {
-  display: none;
-}
-
-.no-csspointerevents .nice-select.open .list {
-  display: block;
-}
-
 @font-face {
   font-family: 'Montserrat';
   src: url(../fonts/Montserrat-Regular.ttf);
@@ -335,7 +156,7 @@ strong, b {
   background: transparent;
 }
 
-.actions-table .dropdown-menu > span:active > a, .actions-table .dropdown-menu > span.nice-select.open > a {
+.actions-table .dropdown-menu > span:active > a {
   color: #cc092f;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
@@ -356,7 +177,7 @@ strong, b {
   background: transparent;
 }
 
-.actions-table .dropdown-menu > span:active, .actions-table .dropdown-menu > span.nice-select.open {
+.actions-table .dropdown-menu > span:active {
   color: #cc092f;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
@@ -451,6 +272,50 @@ strong, b {
   letter-spacing: 2px;
 }
 
+.btn-salvar {
+  opacity: 0.7;
+  background: #11C25D;
+  border-color: #11C25D;
+  color: #fff;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-salvar:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #11C25D;
+  border-color: #11C25D;
+  border-radius: 100px;
+}
+
+.btn-excel {
+  opacity: 0.7;
+  background: #06803b;
+  border-color: #06803b;
+  color: #fff;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-excel:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #06803b;
+  border-color: #06803b;
+  border-radius: 100px;
+}
+
 .btn-incluir {
   opacity: 0.7;
   background: #11C25D;
@@ -509,6 +374,27 @@ strong, b {
 }
 
 .btn-cancelar:hover {
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  color: #fff;
+  opacity: 1;
+  background: #e60935;
+  border-color: #e60935;
+  border-radius: 100px;
+}
+
+.btn-limpar {
+  opacity: 0.7;
+  background: transparent;
+  border-color: #989a9e;
+  color: #989a9e;
+  border-radius: 100px;
+  width: 120px;
+  height: 40px;
+  letter-spacing: 2px;
+}
+
+.btn-limpar:hover {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   color: #fff;
@@ -940,6 +826,79 @@ button:hover:disabled {
   width: 5%;
 }
 
+.clear {
+  clear: both !important;
+  display: block !important;
+}
+
+.w-80 {
+  width: 80px !important;
+}
+
+.w-98 {
+  width: 98px !important;
+}
+
+.w-150 {
+  width: 150px !important;
+}
+
+.w-155 {
+  width: 155px !important;
+}
+
+.w-160 {
+  width: 160px !important;
+}
+
+.w-170 {
+  width: 170px !important;
+}
+
+.w-180 {
+  width: 180px !important;
+}
+
+.w-190 {
+  width: 190px !important;
+}
+
+.w-200 {
+  width: 200px !important;
+}
+
+.w-290 {
+  width: 290px !important;
+}
+
+.h-100 {
+  height: 100px !important;
+}
+
+.h-122 {
+  height: 122px !important;
+}
+
+.space {
+  height: 100px;
+}
+
+.space2 {
+  height: 120px;
+}
+
+.space3 {
+  height: 10px;
+}
+
+.space4 {
+  height: 40px;
+}
+
+.space5 {
+  height: 80px;
+}
+
 .border-itens {
   border-right: 1px solid #d7e5ff;
 }
@@ -962,37 +921,6 @@ button:hover:disabled {
 
 span.current {
   font-weight: 600 !important;
-}
-
-.nice-select {
-  border: 1px solid #D6D6D6 !important;
-  -webkit-transition: 0.6s all !important;
-  transition: 0.6s all !important;
-  margin-bottom: 10px !important;
-}
-
-.nice-select:hover {
-  border-color: #dbdbdb;
-}
-
-.nice-select:active, .nice-select.open, .nice-select:focus, .nice-select:visited {
-  border-color: #999;
-  font-weight: 600;
-}
-
-.nice-select:after {
-  border-bottom: 2px solid  #D6D6D6 !important;
-  border-right: 2px solid  #D6D6D6 !important;
-  height: 10px !important;
-  margin-top: -8px !important;
-  right: 12px !important;
-  -webkit-transition: 0.6s all !important;
-  transition: 0.6s all !important;
-  width: 10px !important;
-}
-
-.nice-select .option {
-  min-height: 6px !important;
 }
 
 td > .toggle {
@@ -1146,7 +1074,8 @@ td > .toggle {
 .user .btn-group button > img {
   max-width: 63px;
   float: left;
-  border: 1px solid #afc4db;
+  border: 1px solid #212e4b;
+  background: #212e4b;
   border-radius: 100%;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
@@ -1305,7 +1234,7 @@ td > .toggle {
 
 #sidebar .sidebar-header h1 {
   font-family: 'Open Sans', sans-serif !important;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -1433,7 +1362,7 @@ ul.list-unstyled ul a {
 }
 
 .subs li a span {
-  font-size: 17px;
+  font-size: 16px;
   color: #d7e5ff;
 }
 
@@ -1456,7 +1385,7 @@ i.referenciados {
   height: 35px;
 }
 
-.subs li:active a i.referenciados, .subs li.nice-select.open a i.referenciados {
+.subs li:active a i.referenciados {
   background: url(../img/referenciados-hover.svg);
   width: 35px;
   height: 35px;
@@ -1612,7 +1541,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   user-select: none;
 }
 
-.pt_Quantity .pt_QuantityNav .pt_QuantityButton:active, .pt_Quantity .pt_QuantityNav .pt_QuantityButton.nice-select.open {
+.pt_Quantity .pt_QuantityNav .pt_QuantityButton:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -1975,7 +1904,7 @@ input:focus ~ label.check-estilo, label.check-estilo {
   border-radius: 4px;
 }
 
-.datetimepicker table tr td span.active:active, .datetimepicker table tr td span.active.nice-select.open, .datetimepicker table tr td span.active:hover:active, .datetimepicker table tr td span.active.nice-select.open:hover, .datetimepicker table tr td span.active.disabled:active, .datetimepicker table tr td span.active.disabled.nice-select.open, .datetimepicker table tr td span.active.disabled:hover:active, .datetimepicker table tr td span.active.disabled.nice-select.open:hover, .datetimepicker table tr td span.active.active, .datetimepicker table tr td span.active:hover.active, .datetimepicker table tr td span.active.disabled.active, .datetimepicker table tr td span.active.disabled:hover.active {
+.datetimepicker table tr td span.active:active, .datetimepicker table tr td span.active:hover:active, .datetimepicker table tr td span.active.disabled:active, .datetimepicker table tr td span.active.disabled:hover:active, .datetimepicker table tr td span.active.active, .datetimepicker table tr td span.active:hover.active, .datetimepicker table tr td span.active.disabled.active, .datetimepicker table tr td span.active.disabled:hover.active {
   background: #212e4b;
   color: #fff;
 }
@@ -2482,7 +2411,7 @@ table {
 .pagination {
   list-style: none;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
   position: relative;
 }
@@ -2814,7 +2743,7 @@ tr:hover td.a-2 .menu-invisible {
   }
   .p-select {
     margin-bottom: 6px;
-    margin-top: 34px !important;
+    margin-top: 0 !important;
   }
   .form {
     position: relative;
@@ -2901,8 +2830,7 @@ tr:hover td.a-2 .menu-invisible {
     -webkit-transform: none;
             transform: none;
   }
-  #sidebarCollapse span:first-of-type,
-  #sidebarCollapse span:nth-of-type(2),
+  #sidebarCollapse span:first-of-type, #sidebarCollapse span:nth-of-type(2),
   #sidebarCollapse span:last-of-type {
     -webkit-transform: none;
             transform: none;
@@ -2960,7 +2888,7 @@ tr:hover td.a-2 .menu-invisible {
   }
   .p-select {
     margin-bottom: 6px;
-    margin-top: 34px !important;
+    margin-top: 0px !important;
   }
   .form {
     position: relative;
@@ -2987,7 +2915,7 @@ tr:hover td.a-2 .menu-invisible {
   color: #cccdce !important;
 }
 
-.paginate_button.current, .paginate_button:hover, .paginate_button.current:active, .paginate_button.current.nice-select.open {
+.paginate_button.current, .paginate_button:hover, .paginate_button.current:active {
   color: #fff !important;
   background: #989a9e !important;
   border-color: #989a9e !important;
@@ -3022,7 +2950,7 @@ table.dataTable.no-footer {
   color: white !important;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled.nice-select.open {
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
   cursor: default;
   color: #666 !important;
   background: none !important;

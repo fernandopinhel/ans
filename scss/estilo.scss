@@ -1,6 +1,5 @@
 // imports
 @charset "UTF-8";
-@import 'nice-select.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 // fim imports
@@ -39,7 +38,9 @@ $color-gray: #e8e9ec;
 $transition: 0.6s all;
 
 $btn-incluir: #11C25D;
-$btn-cancelar: #4d4e53;
+$btn-excel: #06803b;
+$btn-cancelar:#e60935;
+$btn-limpar: #4d4e53;
 $btn-excluir: #e60935;
 $btn-buscar: #499ED0;
 $btn-voltar: #499ED0;
@@ -268,6 +269,51 @@ strong, b{font-weight: bold;}
     letter-spacing: 2px;
 }
 
+.btn-salvar{
+    opacity: 0.7;
+    background: $btn-incluir;
+    border-color: $btn-incluir;
+    color: #fff;
+    border-radius: 100px;
+    // transition: $transition;
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+
+.btn-salvar:hover{
+    transition: $transition;
+    color: #fff;
+    opacity: 1;
+    background: $btn-incluir;
+    border-color: $btn-incluir;
+    border-radius: 100px;
+}
+
+
+.btn-excel{
+    opacity: 0.7;
+    background: $btn-excel;
+    border-color: $btn-excel;
+    color: #fff;
+    border-radius: 100px;
+    // transition: $transition;
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+
+.btn-excel:hover{
+    transition: $transition;
+    color: #fff;
+    opacity: 1;
+    background: $btn-excel;
+    border-color: $btn-excel;
+    border-radius: 100px;
+}
+
 .btn-incluir{
     opacity: 0.7;
     background: $btn-incluir;
@@ -330,6 +376,27 @@ strong, b{font-weight: bold;}
     opacity: 1;
     background: $btn-cancelar;
     border-color: $btn-cancelar;
+    border-radius: 100px;
+}
+
+.btn-limpar{
+    opacity: 0.7;
+    background: transparent;
+    border-color: $color-content;
+    color:  $color-content;
+    border-radius: 100px;
+    // transition: $transition;
+    width: 120px;
+    height: 40px;
+    letter-spacing: 2px;
+}
+
+.btn-limpar:hover{
+    transition: $transition;
+    color: #fff;
+    opacity: 1;
+    background: $btn-limpar;
+    border-color: $btn-limpar;
     border-radius: 100px;
 }
 
@@ -663,6 +730,25 @@ button:hover:disabled {
 
 .w-space{width: 5%;}
 
+.w-80{width: 80px !important;}
+.w-98{width: 98px !important;}
+.w-150{width: 150px !important;}
+.w-155{width: 155px !important;}
+.w-160{width: 160px !important;}
+.w-170{width: 170px !important;}
+.w-180{width: 180px !important;}
+.w-190{width: 190px !important;}
+.w-200{width: 200px !important;}
+.w-290{width: 290px !important;}
+.h-100{height: 100px !important;}
+.h-122{height: 122px !important;}
+
+.space{height: 100px;}
+.space2{height: 120px;}
+.space3{height: 10px;}
+.space4{height: 40px;}
+.space5{height: 80px;}
+
 .border-itens{border-right: 1px solid $color-header-content;}
 .border-itens-2{border-left: 1px solid $color-header-content;}
 
@@ -671,7 +757,6 @@ button:hover:disabled {
     height: 30px;
     float: right;
 }
-// select(combo box) nice-select
 
 .p-select{
     margin-bottom: 6px;
@@ -682,34 +767,6 @@ button:hover:disabled {
 span.current{
     font-weight: 600 !important;
 }
-
-.nice-select {
-    border: 1px solid #D6D6D6 !important;    
-    transition: $transition !important;
-    margin-bottom: 10px !important;
-    &:hover {
-        border-color: darken($gray_light, 5%);
-    }
-    &:active, &:focus, &:visited{
-        border-color: $primary_light;
-        font-weight: 600;
-    }
-    // Arrow
-    &:after { 
-      border-bottom: 2px solid  #D6D6D6 !important;
-      border-right: 2px solid  #D6D6D6 !important;      
-      height: 10px !important;
-      margin-top: -8px !important;
-      right: 12px !important; 
-      transition: $transition !important;
-      width: 10px !important;
-    }
-}
-
-.nice-select .option {
-    min-height: 6px !important;
-}
-// fim select(combo box) nice-select
 
 // toggle on/off
 td > .toggle{
@@ -857,7 +914,8 @@ td > .toggle{
 .user .btn-group button > img{
     max-width: 63px;
     float: left;
-    border: 1px solid $color-header-menu;
+    border: 1px solid $bg-dark;
+    background:$bg-dark;
     border-radius: 100%;
     transition: $transition;
 }
@@ -1011,7 +1069,7 @@ td > .toggle{
 
 #sidebar .sidebar-header h1{
     font-family: 'Open Sans', sans-serif !important;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
@@ -1118,7 +1176,7 @@ ul.list-unstyled ul a {background: $bg-dark;}
 }
 
 .subs li a span{
-    font-size: 17px;
+    font-size: 16px;
     color: $color-header-content;
 }
 
@@ -2098,7 +2156,7 @@ table {background-color: none;}
 .pagination{
     list-style: none;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
     text-align: center;
     position: relative;
 }
@@ -2396,7 +2454,7 @@ tr:hover td.a-2 .menu-invisible{
 
     .p-select{
         margin-bottom: 6px;
-        margin-top: 34px !important;
+        margin-top: 0 !important;
     }
     
     .form {
@@ -2484,6 +2542,12 @@ tr:hover td.a-2 .menu-invisible {
 }
 
 @media ( max-width : 992px) {
+    // .space{height: 0px;}
+    // .space2{height: 0px;}
+    // .space3{height: 0px;}
+    // .space4{height: 0px;}
+    // .space5{height: 0px;}
+
 	#sidebar {
 		margin-left: -300px
 	}
@@ -2546,7 +2610,7 @@ tr:hover td.a-2 .menu-invisible {
 	}
 	.p-select {
 		margin-bottom: 6px;
-		margin-top: 34px !important
+		margin-top: 0px !important
 	}
 	.form {
 		position: relative;
