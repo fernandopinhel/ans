@@ -1,0 +1,11 @@
+@media all and (-ms-high-contrast:none){
+    .p-select {
+        margin-top: -22px;
+    }
+    .input-date {
+        margin-top: -5px;
+    }
+    .subs li a span.seta-accordion{
+        top: 20px;
+    }
+}

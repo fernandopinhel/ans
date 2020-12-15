@@ -1,0 +1,8 @@
+.obrigatorio{
+	color: #F00;
+	font-weight: bold;
+}
+.required{
+	background: #FFDFE0;
+	border: 1px solid #EFC2C4;
+}
