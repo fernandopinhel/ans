@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <title>Protótipo OPME - Unidade de Medida</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="../css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="../css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="../css/icones-bradesco.css">
+        <!-- estilo select(combo-box) -->
+        <!-- <link rel="stylesheet" href="../css/nice-select.css"> -->
+    </head>
+
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header text-center">
+                    <img src="../img/icon-logo-bradesco.png" class="mb-3">
+                    <h1>Gestão OPME</h1>                                          
+                </div>
+                <ul class="list-unstyled components">
+                    <li><!-- painel -->
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled subs" id="painelSubmenu">
+                            <li class="fases">
+                                <a href="#dashboardSubmenu" onclick="window.location.href='/dashboard/dashboard.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-rendimento mr-4"></i>
+                                    <span class="item-menu">Dashboard</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
+                                </a>
+                            </li>
+                            <li class="fases">
+                                <a href="#processosSubmenu" onclick="window.location.href='/processos/processos.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-doc-papel mr-4"></i>
+                                    <span class="item-menu">Processos</span>
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
+                                </a>
+                            </li>
+                            <li class="msg">
+                                <a href="#mensagensSubmenu" onclick="window.location.href='/mensagens/mensagens.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-mensagem mr-4"></i>
+                                    <span class=" item-menu">Mensagens</span>
+                                    <!-- <span class="mensagem"><span class="quant-msg">8</span></span> -->
+                                    <span class="proximas"><span class="proximas-fases" data-toggle="tooltip" data-original-title="Fase 2">F2</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#relatoriosSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatórios</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatoriosSubmenu">
+                                    <li>
+                                        <a href="/relatorios/geral-de-precificacao.html">Geral de Precificação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ranking</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Economia por Negociação</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Log de Auditoria</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produtividade por Analista</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ordem Fornecedor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#hospitalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon referenciados mr-4"></i>
+                                    <span class="item-menu">Hospitais/Clínicas</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="hospitalSubmenu">
+                                    <li>
+                                        <a href="/hospital/hospital-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/hospital/hospital-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#tabelaValoresHospitalSubmenu" onclick="window.location.href='/tabelas/tabela-valores-hospital.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Hospital</span>   
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>                                 
+                                </a>
+                            </li>
+                            <li class="dsv">
+                                <a href="#tabelaValoresFornecedorSubmenu" onclick="window.location.href='/tabelas/tabela-valores-fornecedor.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-servicos mr-4"></i>
+                                    <span class="item-menu">Tabela de Valores Fornecedor</span>
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#marcasEfabricantesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-produtos mr-4"></i>
+                                    <span class="item-menu">Marcas/Fabricantes</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="marcasEfabricantesSubmenu">
+                                    <li>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/marcas-e-fabricantes/marcas-e-fabricantes-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#solicitacaoComprasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-resgate mr-4"></i>
+                                    <span class="item-menu">Solicitação/Compra</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="solicitacaoComprasSubmenu">
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/solicitacao-compras/solicitacao-compras-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#fornecedorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-compras mr-4"></i>
+                                    <span class="item-menu">Fornecedor</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="fornecedorSubmenu">
+                                    <li>
+                                        <a href="/fornecedor/fornecedor-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/fornecedor/fornecedor-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#itensSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-diversidade mr-4"></i>
+                                    <span class="item-menu">Itens</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="itensSubmenu">
+                                    <li>
+                                        <a href="/itens/itens-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/itens/itens-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim painel -->
+                    <li><!-- configuracoes -->
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Configurações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li class="active">
+                                <a href="#unidadeDeMedidaSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                                    <i class="icon unidade-de-medida mr-4"></i>
+                                    <span class="item-menu">Unidade de Medida</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse show list-unstyled list-style-2 list-subs" id="unidadeDeMedidaSubmenu">
+                                    <li class="sub-active">
+                                        <a href="/unidade-de-medida/unidade-de-medida-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/unidade-de-medida/unidade-de-medida-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#unidadeDeNegocioSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-pasta mr-4"></i>
+                                    <span class="item-menu">Unidade de Negócio</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="unidadeDeNegocioSubmenu">
+                                    <li>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-consulta.html">Consulta</a>
+                                    </li>
+                                    <li>
+                                        <a href="/unidade-de-negocio/unidade-de-negocio-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dsv">
+                                <a href="#controleDeAcessoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon usuarios mr-4"></i>
+                                    <span class="item-menu">Controle de Acesso</span>
+                                    <!-- <span class="seta-accordion"></span> -->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="controleDeAcessoSubmenu">
+                                    <li>
+                                        <a href="/controle-de-acesso/usuario-consulta.html">Consulta Usuário</a>
+                                    </li>
+                                    <li>
+                                        <a href="/controle-de-acesso/usuario-cadastro.html">Cadastro Usuário</a>
+                                    </li>
+                                    <li>
+                                        <a href="/controle-de-acesso/grupo-de-acesso-consulta.html">Consulta Grupo de Acesso</a>
+                                    </li>
+                                    <li>
+                                        <a href="/controle-de-acesso/grupo-de-acesso-cadastro.html">Cadastro Grupo de Acesso</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#telasSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon telas mr-4"></i>
+                                    <span class="item-menu">Telas</span>
+                                    <!-- <span class="seta-accordion"></span>-->
+                                    <span class="criando"><span class="desenvolvimento" data-toggle="tooltip" data-original-title="Em Desenvolvimento">D</span></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="telasSubmenu">
+                                    <li>
+                                        <a href="/telas/telas-consulta.html">Consulta</a>
+                                    </li>
+                                    <li class="sub-active">
+                                        <a href="/telas/telas-cadastro.html">Cadastro</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim configuracoes -->
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+
+            <!-- conteudo pagina -->
+            <div class="content" id="busca-unidade-de-medida">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                        <div class="float-left">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="user float-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">Renata Scott</p>
+                                    <img src="../img/user.png">
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-5">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Consulta Unidade de Medida</h1>
+                                    </div>
+                                </div>                               
+                            </div> 
+                            <div class="row mt-5">
+                                <div class="col-lg-3">                                    
+                                    <div class="form">
+                                        <input type="text" value="UND" name="descricao01" autocomplete="off" class="used">
+                                        <label for="descricao01" class="label-name">
+                                            <span class="content-name">Descrição</span>
+                                        </label>
+                                    </div>                      
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form">
+                                        <input type="text" value="Unidade" name="complemento-01" autocomplete="off" class="used">
+                                        <label for="complemento-01" class="label-name">
+                                            <span class="content-name">Complemento</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">                                    
+                                    <p class="p-select">Status</p>
+                                    <select class="form-control h-35">
+                                        <option value="1" selected>Selecione</option>
+                                        <option value="2">Ativo</option>
+                                        <option value="3">Inativo</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row btns-opcoes mt-5">
+                                <div class="col-lg-12">
+                                    <button type="reset"  value="Reset" name="button" class="btn btn-cancelar">Cancelar</button>
+                                    <button type="submit" name="button" class="btn btn-buscar">Buscar</button>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">Itens encontrados:<span>30</span></h4>
+                                            <a href="#" class="float-right">
+                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th></th>
+                                    <th>Código</th>
+                                    <th>Descrição</th>
+                                    <th>Complemento</th>
+                                    <th>Data da Inclusão</th>
+                                    <th>Reponsável pela Inclusão</th>
+                                    <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-medida-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>001</td>
+                                        <td>UND</td>
+                                        <td>Unidade</td>
+                                        <td>10/04/20</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-medida-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>002</td>
+                                        <td>UND</td>
+                                        <td>Unidade</td>
+                                        <td>12/04/20</td>
+                                        <td>Renata Scott</td>
+                                        <td>Inativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-medida-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>003</td>
+                                        <td>UND</td>
+                                        <td>Unidade</td>
+                                        <td>13/04/20</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-medida-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>004</td>
+                                        <td>UND</td>
+                                        <td>Unidade</td>
+                                        <td>14/04/20</td>
+                                        <td>Renata Scott</td>
+                                        <td>Inativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="actions">
+                                            <div class="float-right">
+                                            <div class="menu-visible">
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                                <span class="circle"></span>
+                                            </div>
+                                            <div class="menu-invisible">
+                                                <a href="unidade-de-medida-detalhes.html">
+                                                    <img src="../img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar/ Editar Detalhes">
+                                                </a>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td>005</td>
+                                        <td>UND</td>
+                                        <td>Unidade</td>
+                                        <td>15/04/20</td>
+                                        <td>Renata Scott</td>
+                                        <td>Ativo</td>
+                                    </tr>
+                                    <tr class="separator">
+                                        <td colspan="5"></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination lista-contatos">
+                            <li>
+                                <a href="#" class="prev">
+                                <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <a href="#" class="prev">
+                                <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" class="next">
+                                <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="next">
+                                    <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-version">
+                <p>V.1.0</p>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- jQuery -->
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="../js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="../js/bootstrap-datetimepicker.js"></script>
+        <script src="../js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="../js/jquery.mask.min.js"></script>   
+        <!-- script select(combo-box) -->
+        <!-- <script src="../js/jquery.nice-select.js"></script> -->
+        <!-- scripts -->
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>
