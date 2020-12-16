@@ -239,12 +239,60 @@
                                     </div>
                                 </div>                               
                             </div> 
-                            <div class="row mt-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="consultar-area-temas.html">Consulta</a></li>                                  
+                                          <li class="breadcrumb-item active" aria-current="page">Cadastrar Associação entre Áreas e Temas</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                           <div class="row">
+                               <div class="col-12">
+                                    <div class="alert alert-success" id="msg-inclusao" role="alert">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <img src="img/check-cadatro.svg" width="23" class="float-left">
+                                                    <p><span class="mr-2">Data do Cadastro: <b>18/12/2020</b></span> | <span class="ml-2">Responsável pelo Cadastro: <b>M229163</b></span></p>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-close close-inclusao">
+                                                        <img src="img/close.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-danger" id="msg-input-error" role="alert">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <img src="img/alert-error.svg" width="23" class="float-left">
+                                                    <p><span class="mr-2">Data da Exlusão: <b>18/12/2020</b></span> | <span class="ml-2">Responsável pela Exlusão: <b>M229163</b></span></p>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-close close-error">
+                                                        <img src="img/close.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="row mt-4">
                                 <div class="col-lg-4">
                                     <p class="p-select">Selecionar Área</p>
                                     <select class="form-control">
-                                        <option data-display="Selecione">Selecione</option>
-                                        <option value="1">Área 1</option>
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Área 1</option>
                                     </select>
                                 </div>                   
                                 <div class="space"></div>
@@ -253,32 +301,33 @@
                                 <div class="col-lg-4">
                                     <p class="p-select">Selecionar Tema Nível 1</p>
                                     <select class="form-control">
-                                        <option data-display="Selecione">Selecione</option>
-                                        <option value="1">Produto ou Plano</option>
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Produto ou Plano</option>
                                     </select>
                                 </div>      
                                 <div class="space"></div> 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <p class="p-select">Selecionar Tema Nível 2</p>
                                     <select class="form-control">
-                                        <option data-display="Selecione">Selecione</option>
-                                        <option value="1">Cobertura</option>
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Cobertura</option>
                                     </select>
                                 </div>      
                                 <div class="space"></div> 
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                     <p class="p-select">Selecionar Tema Nível 3</p>
                                     <select class="form-control">
-                                        <option data-display="Selecione">Selecione</option>
-                                        <option value="1">Gerenciamento das Ações de Saúde por Parte da Operadora</option>
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Gerenciamento das Ações de Saúde por Parte da Operadora</option>
                                     </select>
                                 </div>      
                                 <div class="space"></div> 
                             </div>
                             <div class="row btns-opcoes">
                                 <div class="col-lg-12">
-                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar">Limpar</button>
-                                    <button type="button" name="button"  class="btn btn-salvar mr-0">Salvar</button>                                    
+                                    <button type="button" data-toggle="tooltip" data-placement="top" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='consultar-area-temas.html'" name="button" class="btn btn-voltar float-left mr-2">Voltar</button>
+                                    <button type="button" name="button"  class="btn btn-salvar b-incluir mr-0" data-toggle="modal" data-target="#modalCadastrar">Salvar</button>                                    
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-right mr-2">Limpar</button>
                                 </div>
                             </div>
                         </div>
@@ -289,6 +338,26 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
+
+          <!-- Modal -->
+            <!-- Modal Cadastrar -->
+            <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-cadastrar-title" id="modalCadastrarTitle">Cadastro realizada com sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Cadastrar -->
+        <!-- Fim Modal -->
 
         <!-- jQuery -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>

@@ -237,9 +237,57 @@
                                     <div class="title-page">
                                         <h1>Cadastrar E-mail para Áreas</h1>
                                     </div>
-                                </div>                               
+                                </div>         
                             </div> 
-                            <div class="row mt-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                          <li class="breadcrumb-item"><a href="consultar-email.html">Consulta</a></li>                                  
+                                          <li class="breadcrumb-item active" aria-current="page">Cadastrar E-mail para Áreas</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                           <div class="row">
+                               <div class="col-12">
+                                    <div class="alert alert-success" id="msg-inclusao" role="alert">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <img src="img/check-cadatro.svg" width="23" class="float-left">
+                                                    <p><span class="mr-2">Data do Cadastro: <b>18/12/2020</b></span> | <span class="ml-2">Responsável pelo Cadastro: <b>M229163</b></span></p>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-close close-inclusao">
+                                                        <img src="img/close.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-danger" id="msg-input-error" role="alert">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <img src="img/alert-error.svg" width="23" class="float-left">
+                                                    <p><span class="mr-2">Data da Exlusão: <b>18/12/2020</b></span> | <span class="ml-2">Responsável pela Exlusão: <b>M229163</b></span></p>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-close close-error">
+                                                        <img src="img/close.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                      
+                            <div class="row mt-4">
                                 <div class="col-lg-4">
                                     <p class="p-select">Selecionar Área</p>
                                     <select class="form-control">
@@ -272,6 +320,9 @@
                                         <div class="resultado-filtro-todos">
                                             <h4 class="float-left">Itens adicionados:<span>10</span></h4>
                                         </div>
+                                        <a href="#" class="float-right" data-toggle="modal" data-target="#modalExluirLote">
+                                            <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir Itens Selecionados">
+                                        </a>
                                     </div>
                                 </div>
                                 <hr>
@@ -280,21 +331,33 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
+                                            <th class="th-check">
+                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
+                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </th>
                                             <th></th>  
                                             <th>E-mail</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="actions">
-                                                <div class="float-right">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-5">
+                                                <div class="float-right ml-4">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
                                                         <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
@@ -306,15 +369,21 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
-                                                <div class="float-right">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-5">
+                                                <div class="float-right ml-4">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
                                                         <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
@@ -326,15 +395,21 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
-                                                <div class="float-right">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-5">
+                                                <div class="float-right ml-4">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
                                                         <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
@@ -346,15 +421,21 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
-                                                <div class="float-right">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-5">
+                                                <div class="float-right ml-4">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
-                                                    <a href="#">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
                                                         <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
                                                     </a>
                                                 </div>
@@ -366,8 +447,14 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
-                                                <div class="float-right">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions por-5">
+                                                <div class="float-right ml-4">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
@@ -391,7 +478,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-2">
-                                        <button type="button" name="button" class="btn btn-cancelar">Cancelar</button>
+                                        <button type="button" data-toggle="tooltip" data-placement="top" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='consultar-email.html'" name="button" class="btn btn-voltar float-left mr-2">Voltar</button>
                                     </div>
                                     <div class="col-lg-8">
                                         <ul class="pagination">
@@ -423,7 +510,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-2">
-                                        <button type="button" name="button" class="btn btn-salvar float-right mr-0">Salvar</button>
+                                        <button type="button" name="button" class="btn btn-salvar float-right b-incluir mr-0" data-toggle="modal" data-target="#modalCadastrar">Salvar</button>
                                     </div>
                                 </div>
                             </div>
@@ -435,6 +522,66 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
+          <!-- Modal -->
+            <!-- Modal Cadastrar -->
+            <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-cadastrar-title" id="modalCadastrarTitle">Cadastro realizada com sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Cadastrar -->
+
+               <!-- Modal Excluir -->
+           <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-right" data-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-salvar b-excluir float-left" data-dismiss="modal">Sim</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir -->
+        <!-- Modal Excluir Lote -->
+        <div class="modal fade" id="modalExluirLote" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLoteTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirLoteTitle">Tem certeza que deseja excluir estes itens?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-right" data-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-salvar b-excluir float-left" data-dismiss="modal">Sim</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir Lote -->
+        <!-- Fim Modal -->
 
         <!-- jQuery -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>

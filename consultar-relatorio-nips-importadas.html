@@ -239,8 +239,27 @@
                                     </div>
                                 </div>                               
                             </div> 
-                            <div class="row mt-5">
-                                <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-danger" id="msg-input-error" role="alert">
+                                        <div class="container-fluid p-0">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <img src="img/alert-error.svg" width="23" class="float-left">
+                                                    <p><span class="mr-2">Data da Exlusão: <b>18/12/2020</b></span> | <span class="ml-2">Responsável pela Exlusão: <b>M229163</b></span></p>
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-close close-error">
+                                                        <img src="img/close.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-2">
                                     <div class="form">
                                         <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-nip" onkeypress="mascaraData(this, event)" autocomplete="off">
                                         <label for="dt-nip" class="label-name">
@@ -260,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-5">
                                     <p class="p-select">Selecionar Área</p>
                                     <select class="form-control">
                                         <option data-display="Selecione">Selecione</option>
@@ -269,7 +288,7 @@
                                     </select>
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <p class="p-select">Situação da NIP</p>
                                     <select class="form-control">
                                         <option data-display="Selecione">Selecione</option>
@@ -286,7 +305,7 @@
                                     </select>
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <p class="p-select">Selecionar Tema Nível 2</p>
                                     <select class="form-control">
                                         <option data-display="Selecione">Selecione</option>
@@ -294,7 +313,7 @@
                                     </select>
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                     <p class="p-select">Selecionar Tema Nível 3</p>
                                     <select class="form-control">
                                         <option data-display="Selecione">Selecione</option>
@@ -334,7 +353,10 @@
                                         <div class="resultado-filtro-todos">
                                             <h4 class="float-left">Itens encontrados:<span>10</span></h4>
                                             <a href="#" class="float-right">
-                                                <img src="../img/print.svg" data-toggle="tooltip" data-original-title="Imprimir tabela">
+                                                <img src="img/print.svg" data-toggle="tooltip" data-original-title="Imprimir Tabela">
+                                            </a>
+                                            <a href="#" class="float-right mr-2" data-toggle="modal" data-target="#modalExluirLote">
+                                                <img src="img/excluir.svg" data-toggle="tooltip" data-original-title="Excluir Itens Selecionados">
                                             </a>
                                         </div>
                                     </div>
@@ -345,9 +367,15 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
+                                            <th class="th-check">
+                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
+                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </th>
                                             <th></th>
-                                            <th>Data da NIP</th>
-                                            <th>Data de Envio</th>
+                                            <th>Data NIP</th>
+                                            <th>Data Envio</th>
                                             <th>Segurado</th>            
                                             <th>Área</th>            
                                             <th>Tema Nível 1</th>
@@ -358,7 +386,13 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="actions">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-3">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
@@ -366,8 +400,14 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="editar-nips-importadas.html">
+                                                        <img src="img/editar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
                                                     <a href="detalhes-nips-importadas.html">
-                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -385,7 +425,13 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-3">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
@@ -393,8 +439,14 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="editar-nips-importadas.html">
+                                                        <img src="img/editar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
                                                     <a href="detalhes-nips-importadas.html">
-                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -412,7 +464,13 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-3">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
@@ -420,8 +478,14 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="editar-nips-importadas.html">
+                                                        <img src="img/editar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
                                                     <a href="detalhes-nips-importadas.html">
-                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -439,7 +503,13 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-3">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
@@ -447,8 +517,14 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="editar-nips-importadas.html">
+                                                        <img src="img/editar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
                                                     <a href="detalhes-nips-importadas.html">
-                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -466,7 +542,13 @@
                                             <td colspan="5"></td>
                                         </tr>
                                         <tr>
-                                            <td class="actions">
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions ac-3">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
                                                     <span class="circle"></span>
@@ -474,8 +556,14 @@
                                                     <span class="circle"></span>
                                                 </div>
                                                 <div class="menu-invisible">
+                                                    <a href="#" data-toggle="modal" data-target="#modalExluir">
+                                                        <img src="img/excluir.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Excluir">
+                                                    </a>
+                                                    <a href="editar-nips-importadas.html">
+                                                        <img src="img/editar.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Alterar">
+                                                    </a>
                                                     <a href="detalhes-nips-importadas.html">
-                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Visualizar">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
@@ -534,6 +622,65 @@
                 <p>V.1.0</p>
             </div>
         </div><!-- fim conteudo geral wrapper -->
+
+         <!-- Modal -->
+            <!-- Modal Alterar -->
+            <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="modalAlterarTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title modal-alterar-title" id="modalAlterarTitle">Alteração realizada com sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="img/check-circle.gif" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim Modal Alterar -->
+              <!-- Modal Excluir -->
+           <div class="modal fade" id="modalExluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirTitle">Tem certeza que deseja excluir este item?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-right" data-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-salvar b-excluir float-left" data-dismiss="modal">Sim</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir -->
+        <!-- Modal Excluir Lote -->
+        <div class="modal fade" id="modalExluirLote" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLoteTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalExcluirLoteTitle">Tem certeza que deseja excluir estes itens?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-cancelar float-right" data-dismiss="modal">Não</button>
+                        <button type="button" class="btn btn-salvar b-excluir float-left" data-dismiss="modal">Sim</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fim Modal Excluir Lote -->
 
         <!-- jQuery -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>

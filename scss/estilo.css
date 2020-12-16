@@ -747,7 +747,7 @@ button:hover:disabled {
   background: #fafafa;
   padding: 6px;
   font-size: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 #msg-inclusao > div > div > div > p {
@@ -826,11 +826,6 @@ button:hover:disabled {
   width: 5%;
 }
 
-.clear {
-  clear: both !important;
-  display: block !important;
-}
-
 .w-80 {
   width: 80px !important;
 }
@@ -880,7 +875,7 @@ button:hover:disabled {
 }
 
 .space {
-  height: 100px;
+  height: 80px;
 }
 
 .space2 {
@@ -1072,7 +1067,7 @@ td > .toggle {
 }
 
 .user .btn-group button > img {
-  max-width: 63px;
+  max-width: 53px;
   float: left;
   border: 1px solid #212e4b;
   background: #212e4b;
@@ -1090,7 +1085,7 @@ td > .toggle {
 
 .user .btn-group button .options {
   float: left;
-  margin: 20px 0 0 10px;
+  margin: 15px 0 0 10px;
 }
 
 .user .btn-group button .options span {
@@ -1667,7 +1662,6 @@ input:disabled {
   background: transparent !important;
   padding: 0 !important;
   position: relative !important;
-  top: 10px !important;
 }
 
 input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
@@ -1685,7 +1679,7 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
 
 .ex-radio label {
   padding-left: 27px;
-  font-size: 16px;
+  font-size: 16px !important;
   color: #989a9e;
   font-weight: normal;
   display: inline-block;
@@ -1714,16 +1708,19 @@ input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
   background-color: #fff;
   -webkit-transition: border 0.3s ease-in-out;
   transition: border 0.3s ease-in-out;
+  font-size: 16px;
 }
 
 .ex-radio input[type=radio]:hover + label::before {
   border: 2px solid #212e4b;
+  font-size: 16px;
 }
 
 .ex-radio input[type=radio]:focus + label::before {
   -webkit-box-shadow: 0 0 1px #212e4b;
           box-shadow: 0 0 1px #212e4b;
   outline: none;
+  font-size: 16px;
 }
 
 .ex-radio input[type=radio]:checked + label::before,
@@ -2044,8 +2041,8 @@ h6.title-lista {
 }
 
 .i-detalhes, .i-excluir, .i-editar, .i-historico {
-  width: 37px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
 }
 
 .i-result {
@@ -2495,7 +2492,7 @@ table td.actions:last-child {
 
 td.actions .float-right {
   position: relative;
-  margin-right: 25px;
+  margin-right: 35px;
 }
 
 td.actions .menu-visible {
@@ -2523,6 +2520,10 @@ tr:hover td.ac-2 .menu-invisible {
 tr td.ac-2 .menu-invisible {
   left: -60px !important;
   width: 80px !important;
+}
+
+td.ac-3 {
+  width: 5% !important;
 }
 
 tr:hover td.ac-3 {
@@ -2626,7 +2627,15 @@ tr:hover td.a-2 .menu-invisible {
   z-index: 1;
 }
 
-@media (min-width: 1366px) and (max-width: 1680px) {
+.form-control {
+  padding: 0 !important;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: transparent !important;
+}
+
+@media (min-width: 1280px) and (max-width: 1680px) {
   .por-8 {
     width: 10% !important;
   }
@@ -2655,6 +2664,51 @@ tr:hover td.a-2 .menu-invisible {
   }
   button.mr-3 {
     margin-right: 0 !important;
+  }
+  input:focus ~ label.radio-estilo, input.used ~ label.radio-estilo {
+    top: -20px;
+    -webkit-transform: none !important;
+            transform: none !important;
+    left: 0 !important;
+    padding-left: 27px !important;
+    font-size: 14px !important;
+    color: #989a9e !important;
+    font-weight: normal !important;
+    display: inline-block !important;
+    position: relative !important;
+  }
+  .ex-radio label {
+    padding-left: 27px;
+    font-size: 14px !important;
+    color: #989a9e;
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+  }
+  .ex-radio input[type=radio] + label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 4px;
+    border: 1px solid #D6D6D6;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
+    font-size: 14px !important;
+  }
+  .ex-radio input[type=radio]:hover + label::before {
+    border: 2px solid #212e4b;
+    font-size: 14px !important;
+  }
+  .ex-radio input[type=radio]:focus + label::before {
+    -webkit-box-shadow: 0 0 1px #212e4b;
+            box-shadow: 0 0 1px #212e4b;
+    outline: none;
+    font-size: 14px !important;
   }
 }
 

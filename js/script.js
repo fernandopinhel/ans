@@ -427,8 +427,15 @@ $(document).ready(function () {
 // fim script Popover
 
 // scripts mensagens alertas
+$('#msg-inclusao').addClass('d-none')
+$('#msg-input-error').addClass('d-none')
+
 $(".b-incluir").click(function(){
     $('#msg-inclusao').removeClass('d-none')
+});
+
+$(".b-excluir").click(function(){
+    $('#msg-input-error').removeClass('d-none')
 });
 
 $(".close-inclusao").click(function(){
