@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ebix" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Protótipo ANS - Relatório de NIPS Importadas.</title>
+        <!-- Bootstrap -->    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Estilo CSS IE -->
+        <link rel="stylesheet" type="text/css" href="css/ie.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="css/icones-bradesco.css">
+    </head>
+
+    <body>
+        <!-- conteudo geral wrapper -->
+        <div class="wrapper">
+            <!-- sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header text-center">
+                    <img src="img/icon-logo-bradesco.png" class="mb-3">
+                    <h1>Gestão De Importação de NIPS ANS</h1>                                          
+                </div>
+                <ul class="list-unstyled components">
+                    <li><!-- painel -->
+                        <a href="#painelSubmenu" id="painel-submenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">                            
+                            <span class="item-menu">Painel</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse show list-unstyled subs" id="painelSubmenu">
+                            <li>
+                                <a href="#dashboardEstatisticoSubmenu" onclick="window.location.href='dashboard-estatistico.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-dados-grafico mr-4"></i>
+                                    <span class="item-menu">Dashboard Estatístico</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#dashboardAnalistaSubmenu" onclick="window.location.href='dashboard-analista.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-fin-rendimento mr-4"></i>
+                                    <span class="item-menu">Dashboard Analista</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#exportarNipsPlusoftSubmenu" onclick="window.location.href='exportar-nips-plusoft.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-exportar mr-4"></i>
+                                    <span class=" item-menu">Exportar NIPs para Plusoft</span>                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#relatorioNipsImportadasSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatório NIPs Importadas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatorioNipsImportadasSubmenu">
+                                    <li> 
+                                        <a href="consultar-relatorio-nips-importadas.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="gerar-relatorio-nips-importadas.html">Gerar Excel</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#relatorioExpoManualSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatório Exportação Manual</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatorioExpoManualSubmenu">
+                                    <li> 
+                                        <a href="consultar-relatorio-exportacao-manual.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="gerar-relatorio-exportacao-manual.html">Gerar Excel</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#relatorioExpoAutomaticaSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-info-noticias mr-4"></i>
+                                    <span class="item-menu">Relatório Exportação Automática</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="relatorioExpoAutomaticaSubmenu">
+                                    <li> 
+                                        <a href="consultar-relatorio-exportacao-automatica.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="gerar-relatorio-exportacao-automatica.html">Gerar Excel</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim painel -->
+                    <li><!-- configuracoes -->
+                        <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
+                            <span class="item-menu">Configurações</span>
+                            <span class="seta-accordion"></span>
+                        </a>
+                        <ul class="collapse list-unstyled list-style-2 subs" id="configuracoesSubmenu">
+                            <li>
+                                <a href="#temaSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-web-acess mr-4"></i>
+                                    <span class="item-menu">Tema</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="temaSubmenu">
+                                    <li> 
+                                        <a href="consultar-tema.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-tema.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#contextoSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-selecionar mr-4"></i>
+                                    <span class="item-menu">Contexto</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="contextoSubmenu">
+                                    <li> 
+                                        <a href="consultar-contexto.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-contexto.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#areaTemasSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-nav-produtos mr-4"></i>
+                                    <span class="item-menu">Áreas e Temas</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="areaTemasSubmenu">
+                                    <li> 
+                                        <a href="consultar-area-temas.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-area-temas.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#emailSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-atend-email mr-4"></i>
+                                    <span class="item-menu">E-mail</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="emailSubmenu">
+                                    <li> 
+                                        <a href="consultar-email.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-email.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#padraoEmailSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-atend-email mr-4"></i>
+                                    <span class="item-menu">Padrão de E-mail</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="padraoEmailSubmenu">
+                                    <li> 
+                                        <a href="consultar-padrao-email.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-padrao-email.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#areasPluSoftSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="icon icon-dados-profissao mr-4"></i>
+                                    <span class="item-menu">Áreas Plusoft</span>
+                                    <span class="seta-accordion"></span>
+                                </a>
+                                <ul class="collapse list-unstyled list-style-2 list-subs" id="areasPluSoftSubmenu">
+                                    <li> 
+                                        <a href="consultar-areas-plusoft.html">Consultar</a>
+                                    </li>
+                                    <li> 
+                                        <a href="cadastrar-areas-plusoft.html">Cadastrar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li><!-- fim configuracoes -->
+                </ul>                
+            </nav>
+            <!-- fim sidebar -->
+
+            <!-- conteudo pagina -->
+            <div class="content" id="busca-unidade-de-medida">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                        <div class="float-left">
+                            <button type="button" id="sidebarCollapse" class="btn-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="user float-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <p class="float-left">M229163</p>
+                                    <img src="img/user.png">
+                                    <div class="options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <form action="">
+                    <div class="container-fluid">
+                        <div class="bg-blank mb-4">
+                            <div class="row mb-3">
+                                <div class="col-lg-12">
+                                    <div class="title-page">
+                                        <h1>Dashboard Analista</h1>
+                                    </div>
+                                </div>                               
+                            </div> 
+                            <div class="row mt-4">
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-inicio" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-inicio" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Início</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-fim" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Fim</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <p class="p-select">Situação da NIP</p>
+                                    <select class="form-control">
+                                        <option data-display="Selecione">Selecione</option>
+                                        <option value="1">NIP 1</option>
+                                        <option value="2">NIP 2</option>                                        
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4 mt-3">
+                                    <button type="button" name="button"  class="btn btn-buscar mr-2">Buscar</button>                                    
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar">Limpar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blank mb-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="box-periodo">
+                                            <p>Período: 17/07/2020 - 17/09/2020</p>
+                                            <hr>
+                                        </div>
+                                    </div>      
+                                    <div class="space6"></div>                          
+                                    <div class="col-lg-3">
+                                        <h6 class="title-dash color-green-2 color-impor">Total de NIPs Importadas</h6>
+                                        <div class="total-nips-importadas mt-5">
+                                            <div class="content-nips-importadas">
+                                                <span>30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="title-dash color-expor">Total de NIPs Exportadas</h6>
+                                        <div class="total-nips-exportadas mt-5">
+                                            <div class="content-nips-exportadas">
+                                                <span>29</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="title-dash color-alerta">Total de NIPs com Alerta</h6>
+                                        <div class="total-nips-alerta mt-5">
+                                            <div class="content-nips-alerta">
+                                                <span>29</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h6 class="title-dash">Classificação de NIPs</h6>
+                                        <div class="chart" id="nips"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid mt-4">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="resultado-filtro-todos">
+                                            <h4 class="float-left">NIPs com Alertas encontrados:<span>10</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="th-check">
+                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
+                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </th>
+                                            <th></th>  
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data NIP</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data Envio</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Segurado</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Área</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 1</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 2</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 3</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Situação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-check ">
+                                                <div class="ex-checkbox">
+                                                    <input type="checkbox" class="marcar" id="checkbox_one">
+                                                    <label for="checkbox_one" class="check-estilo"></label>
+                                                </div>
+                                            </td>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible">
+                                                    <a href="detalhes-dash-analista.html">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>17/07/2020</td>
+                                            <td>17/09/2020</td>
+                                            <td>Fernando Luiz Pereira</td>
+                                            <td>Gestão de Rede Mediservice</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Pendente</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-8">
+                                    <ul class="pagination mt-2">
+                                        <li>
+                                            <a href="#" class="prev">
+                                            <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        <a href="#" class="prev">
+                                            <i class="icon icon-seta-esquerda-a" aria-hidden="true"></i>
+                                        </a>
+                                        </li>
+                                        <li><a href="#" class="active">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                        <a href="#" class="next">
+                                            <i class="icon icon-seta-direita-a" aria-hidden="true"></i>
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="next">
+                                                <i class="icon icon-seta-dupla-direita-b" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2"><button type="button" name="button"  class="btn btn-salvar float-right" data-toggle="tooltip" data-original-title="Exportar NIPs Selecionadas">Exportar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-version">
+                <p>V.1.0</p>
+            </div>
+        </div><!-- fim conteudo geral wrapper -->
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- script datepicker -->
+        <script src="js/bootstrap-datetimepicker.js"></script>
+        <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+        <!-- script mask para inputs cpf, cnpj, data, moeda etc -->
+        <script src="js/jquery.mask.min.js"></script>   
+        <!-- scripts -->
+        <script src="js/script.js"></script>
+        <!-- GOOGLE CHARTS - Load the AJAX API-->
+        <script type="text/javascript" src="libs/google-charts/loader.js"></script>
+        <script type="text/javascript" src="libs/google-charts/scripts-google-charts.js"></script>
+    </body>
+
+</html>

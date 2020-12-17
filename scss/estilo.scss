@@ -30,11 +30,12 @@ $bg-green: #d6ede6;
 $color-green: #11C25D;
 $color-yellow: #FFBC00;
 $color-blue: #499ED0;
-$color-content: #989a9e;
+$color-content: #83858a;
 $color-header-menu: #afc4db;
 $color-header-content: #d7e5ff;
 $bg-active: #cc092f;
 $color-gray: #e8e9ec;
+$color-green-2: #799282;
 $transition: 0.6s all;
 
 $btn-incluir: #11C25D;
@@ -70,7 +71,25 @@ a {
     outline: none;
 }
 
+p{margin-bottom: 5px !important;}
+
 strong, b{font-weight: bold;}
+
+.center{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    vertical-align: middle;
+    line-height: 100%;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform:translate(-50%, -50%);
+}
 
 .form-control:focus{
     background-color: transparent;
@@ -747,7 +766,8 @@ button:hover:disabled {
 .space2{height: 120px;}
 .space3{height: 10px;}
 .space4{height: 40px;}
-.space5{height: 80px;}
+.space5{height: 90px;}
+.space6{height: 60px;}
 
 .border-itens{border-right: 1px solid $color-header-content;}
 .border-itens-2{border-left: 1px solid $color-header-content;}
@@ -768,6 +788,7 @@ span.current{
     font-weight: 600 !important;
 }
 
+
 // toggle on/off
 td > .toggle{
     width: 70px !important;
@@ -783,6 +804,186 @@ td > .toggle{
     padding-top: 7px;
 }
 // fim toggle on/off
+
+// dashboards
+.box-periodo > p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0;
+}
+
+.title-dash{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.color-impor{color: $color-green-2;}
+.color-expor{color: $color-blue;}
+.color-alerta{color: $bg-active;}
+.color-nips{color: $color-green;}
+.color-nips-assistenciais{color: $bg-dark;}
+.color-nips-nao-assistenciais{color: $color-content;}
+
+.total-nips-nao-assis{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $color-content;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips-nao-assis{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips-nao-assis > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $color-content;
+    margin: auto;
+}
+
+.total-nips-assis{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $bg-dark;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips-assis{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips-assis > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $bg-dark;
+    margin: auto;
+}
+
+.total-nips{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $color-green;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $color-green;
+    margin: auto;
+}
+
+.total-nips-importadas{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $color-green-2;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips-importadas{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips-importadas > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $color-green-2;
+    margin: auto;
+}
+
+.total-nips-exportadas{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $color-blue;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips-exportadas{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips-exportadas > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $color-blue;
+    margin: auto;
+}
+
+.total-nips-alerta{
+    width: 100px;
+    height: 100px;
+    border: 4px solid $bg-active;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.content-nips-alerta{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-nips-alerta > span{ 
+    // transform: translate(46px, 0);
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 35px;
+    color: $bg-active;
+    margin: auto;
+}
+// fim dashboards
 
 //navtabs
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
@@ -1374,6 +1575,7 @@ input[type="number"] {
 textarea.form-control{
     border: 1px solid #D6D6D6;
     color: $color-content;
+    padding: 7px !important;
 }
 
 textarea.form-control:focus{
@@ -1829,6 +2031,48 @@ input:focus ~ label.check-estilo, label.check-estilo{
 // fim datepicker
 
 // tabela
+.sort{
+    position: absolute;
+    top: 30px;
+    left:0;
+}
+
+.sort > img{
+    width: 10px;
+    height: 10px;
+}
+
+.sort-2{
+    position: absolute;
+    left:0;
+}
+
+.sort-2 > img{
+    width: 10px;
+    height: 10px;
+}
+
+.sort-3{
+    position: absolute;
+    left:0;
+    top: 33px;
+}
+
+.sort-4 > img{
+    width: 10px;
+    height: 10px;
+}
+
+.sort-4{
+    position: absolute;
+    left:0;
+    top: 54px;
+}
+
+.sort-3 > img{
+    width: 10px;
+    height: 10px;
+}
 
 #box-lista-subs{
     padding: 20px 30px 30px 30px;
@@ -1901,7 +2145,7 @@ h6.title-lista{
 .resultado-filtro-todos > h4 > span{
     color: #fff;
     font-size: 14px;
-    padding: 10px 12px;
+    padding: 7px 9px;
     background-color: $color-content;
     border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -1945,6 +2189,7 @@ table {background-color: none;}
 }
 
 .table>thead>tr>th {
+    position: relative;
     text-transform: uppercase;
     font-weight: 700;
     color: $bg-medium;
