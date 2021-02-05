@@ -234,34 +234,62 @@
                         <div class="bg-blank mb-4">
                             <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <div class="title-page">
+                                    <div class="title-page float-left">
                                         <h1>Dashboard Analista</h1>
+                                    </div>
+                                    <div class="float-right">
+                                        <a href="detalhes-dash-analista.html"class="detalhes-nips mr-2">
+                                            <img src="img/detalhes-nips.svg" width="35" alt="" data-toggle="tooltip" data-original-title="Detalhes">
+                                        </a>
+                                        <a href="#"class="detalhes-nips">
+                                            <img src="img/grafico-nips.svg" width="35" alt="" data-toggle="tooltip" data-original-title="">
+                                        </a>
                                     </div>
                                 </div>                               
                             </div> 
                             <div class="row mt-4">
-                                <div class="col-lg-2">
+                                <div class="col-lg-3">
                                     <div class="form">
                                         <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-inicio" onkeypress="mascaraData(this, event)" autocomplete="off">
                                         <label for="dt-inicio" class="label-name">
                                             <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                            <span>Data Início</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="space"></div>
-                                <div class="col-lg-2">
-                                    <div class="form">
-                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                        <label for="dt-fim" class="label-name">
-                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                            <span>Data Fim</span>
+                                            <span>Data Início Abertura NIP</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p class="p-select">Situação da NIP</p>
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-fim" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Fim Abertura NIP</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-inicio-import" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-inicio-import" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Início Importação</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim-import" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-fim-import" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data Fim Importação</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <p class="p-select">Situação</p>
                                     <select class="form-control">
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1">NIP 1</option>
@@ -269,53 +297,50 @@
                                     </select>
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-lg-4 mt-3">
-                                    <button type="button" name="button"  class="btn btn-buscar mr-2">Buscar</button>                                    
-                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar">Limpar</button>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" name="usuario-resp" autocomplete="off">
+                                        <label for="usuario-resp" class="label-name">
+                                            <span class="content-name">Usuário Responsável</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" name="protocolo-ans" autocomplete="off">
+                                        <label for="protocolo-ans" class="label-name">
+                                            <span class="content-name">Protocolo ANS</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" name="nome-segurado" autocomplete="off">
+                                        <label for="nome-segurado" class="label-name">
+                                            <span class="content-name">Nome Segurado</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" name="cpf-segurado" autocomplete="off">
+                                        <label for="cpf-segurado" class="label-name">
+                                            <span class="content-name">CPF Segurado</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-9 mt-3">
+                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar float-right">Limpar</button>
+                                    <button type="button" name="button"  class="btn btn-buscar mr-2 float-right">Buscar</button>                                    
                                 </div>
                             </div>
                         </div>
                         <div class="bg-blank mb-4">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="box-periodo">
-                                            <p>Período: 17/07/2020 - 17/09/2020</p>
-                                            <hr>
-                                        </div>
-                                    </div>      
-                                    <div class="space6"></div>                          
-                                    <div class="col-lg-3">
-                                        <h6 class="title-dash color-green-2 color-impor">Total de NIPs Importadas</h6>
-                                        <div class="total-nips-importadas mt-5">
-                                            <div class="content-nips-importadas">
-                                                <span>30</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <h6 class="title-dash color-expor">Total de NIPs Exportadas</h6>
-                                        <div class="total-nips-exportadas mt-5">
-                                            <div class="content-nips-exportadas">
-                                                <span>29</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <h6 class="title-dash color-alerta">Total de NIPs com Alerta</h6>
-                                        <div class="total-nips-alerta mt-5">
-                                            <div class="content-nips-alerta">
-                                                <span>29</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <h6 class="title-dash">Classificação de NIPs</h6>
-                                        <div class="chart" id="nips"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid mt-4">
+                            <!-- <div class="container-fluid mt-4">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="resultado-filtro-todos">
@@ -324,36 +349,24 @@
                                     </div>
                                 </div>
                                 <hr>
-                            </div>
+                            </div> -->
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="th-check">
-                                                <div class="ex-checkbox m-0 excluir-todos-check" data-toggle="tooltip" data-original-title="Marcar todos">
-                                                    <input type="checkbox" onclick="marcarTodos(this.checked);" id="checkbox_one" class="">
-                                                    <label for="checkbox_one" class="check-estilo"></label>
-                                                </div>
-                                            </th>
                                             <th></th>  
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data NIP</th>
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data Envio</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Protocolo ANS</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data Abertura NIP</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Data Importação</th>
                                             <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Segurado</th>
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Área</th>
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 1</th>
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 2</th>
-                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema Nível 3</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Categoria</th>
                                             <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Situação</th>
+                                            <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Analista</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="td-check ">
-                                                <div class="ex-checkbox">
-                                                    <input type="checkbox" class="marcar" id="checkbox_one">
-                                                    <label for="checkbox_one" class="check-estilo"></label>
-                                                </div>
-                                            </td>
                                             <td class="actions">
                                                 <div class="float-right">
                                                 <div class="menu-visible">
@@ -361,32 +374,139 @@
                                                     <span class="circle"></span>
                                                     <span class="circle"></span>
                                                 </div>
-                                                <div class="menu-invisible">
+                                                <div class="menu-invisible ml-2">
                                                     <a href="detalhes-dash-analista.html">
                                                         <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
                                                     </a>
                                                 </div>
                                                 </div>
                                             </td>
-                                            <td>17/07/2020</td>
-                                            <td>17/09/2020</td>
-                                            <td>Fernando Luiz Pereira</td>
-                                            <td>Gestão de Rede Mediservice</td>
+                                            <td>12211111</td>
+                                            <td>01/02/2021</td>
+                                            <td>02/02/2021</td>
+                                            <td>Paulo Antônio Carlos</td>
+                                            <td>Gerenciamento das ações de Saúde por Parte da Operadora</td>
+                                            <td>Assistêncial</td>
+                                            <td>Recebida</td>
                                             <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Pendente</td>
                                         </tr>
                                         <tr class="separator">
                                             <td colspan="5"></td>
-                                        </tr>                                      
+                                        </tr>      
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible ml-2">
+                                                    <a href="detalhes-dash-analista.html">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>232323232</td>
+                                            <td>01/02/2021</td>
+                                            <td>02/02/2021</td>
+                                            <td>Paulo Antônio Carlos</td>
+                                            <td>Rol de Procedimentos e Coberturas</td>
+                                            <td>Não Assistêncial</td>
+                                            <td>Em análise</td>
+                                            <td>M2532533</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>                    
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible ml-2">
+                                                    <a href="detalhes-dash-analista.html">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>312112121</td>
+                                            <td>01/02/2021</td>
+                                            <td>02/02/2021</td>
+                                            <td>Paulo Antônio Carlos</td>
+                                            <td>Prazos Máximos por atendimento</td>
+                                            <td>Assistêncial</td>
+                                            <td>Em atraso</td>
+                                            <td>G1232222</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>        
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible ml-2">
+                                                    <a href="detalhes-dash-analista.html">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>212121</td>
+                                            <td>01/02/2021</td>
+                                            <td>02/02/2021</td>
+                                            <td>Paulo Antônio Carlos</td>
+                                            <td>Reembolso</td>
+                                            <td>Não Assistêncial</td>
+                                            <td>Respondida</td>
+                                            <td>G1232222</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>                  
+                                        <tr>
+                                            <td class="actions">
+                                                <div class="float-right">
+                                                <div class="menu-visible">
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                    <span class="circle"></span>
+                                                </div>
+                                                <div class="menu-invisible ml-2">
+                                                    <a href="detalhes-dash-analista.html">
+                                                        <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </td>
+                                            <td>2121212121</td>
+                                            <td>01/02/2021</td>
+                                            <td>02/02/2021</td>
+                                            <td>Paulo Antônio Carlos</td>
+                                            <td>Rede de Atendimento (Rede Conveniada)</td>
+                                            <td>Assistêncial</td>
+                                            <td>Cancelada</td>
+                                            <td>G523333</td>
+                                        </tr>
+                                        <tr class="separator">
+                                            <td colspan="5"></td>
+                                        </tr>                                   
                                     </tbody>
                                 </table>
                             </div>
                             <div class="row">
-                                <div class="col-lg-2"></div>
-                                <div class="col-lg-8">
-                                    <ul class="pagination mt-2">
+                                <div class="col-lg-12">
+                                    <ul class="pagination">
                                         <li>
                                             <a href="#" class="prev">
                                             <i class="icon icon-seta-dupla-b" aria-hidden="true"></i>
@@ -413,8 +533,35 @@
                                             </a>
                                         </li>
                                     </ul>
+                                </div>                               
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <div class="sub-title">
+                                        <div class="row d-flex">
+                                            <div class="col-lg-2 my-auto">
+                                                <div class="sub-title border-itens">
+                                                    <p class="color-blue">Total NIPS: <b>20</b></p>
+                                                </div>                                                        
+                                            </div>
+                                            <div class="col-lg-2 my-auto">
+                                                <div class="sub-title border-itens">
+                                                    <p class="color-blue">Em Análise: <b>5</b></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 my-auto">
+                                                <div class="sub-title border-itens">
+                                                    <p class="color-blue">Fora do Prazo: <b>1</b></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 my-auto">
+                                                <div class="sub-title">
+                                                    <p class="color-blue">Pendente de Análise: <b>15</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2"><button type="button" name="button"  class="btn btn-salvar float-right" data-toggle="tooltip" data-original-title="Exportar NIPs Selecionadas">Exportar</button></div>
                             </div>
                         </div>
                     </div>

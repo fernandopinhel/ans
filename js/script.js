@@ -819,3 +819,6 @@ function marcarTodos(marcardesmarcar){
     });
 }
 
+function toggleFunction(x) {
+    x.classList.toggle("change");
+  }

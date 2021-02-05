@@ -980,47 +980,78 @@ td > .toggle {
 }
 
 .color-impor {
-  color: #799282;
+  color: #fff;
 }
 
-.color-expor {
-  color: #499ED0;
+.color-import-sucess {
+  color: #fff;
 }
 
-.color-alerta {
-  color: #cc092f;
+.color-import-problema {
+  color: #fff;
 }
 
 .color-nips {
-  color: #11C25D;
+  color: #fff;
 }
 
-.color-nips-assistenciais {
-  color: #212e4b;
+.color-nips-analise {
+  color: #fff;
 }
 
-.color-nips-nao-assistenciais {
-  color: #83858a;
+.color-nips-fora-prazo {
+  color: #fff;
 }
 
-.total-nips-nao-assis {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #83858a;
-  border-radius: 50%;
-  margin: 20px auto;
-  position: relative;
-}
-
-.content-nips-nao-assis {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+.total-nips-fora {
   width: 100%;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #e2b323;
+  background-image: url("../img/bg-cards.png"), -webkit-gradient(linear, left top, right top, from(#e2b323), color-stop(35%, #f9c432), to(#e2a622));
+  background-image: url("../img/bg-cards.png"), linear-gradient(90deg, #e2b323 0%, #f9c432 35%, #e2a622 100%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-.content-nips-nao-assis > span {
+.content-nips-fora-prazo {
+  text-align: center;
+}
+
+.content-nips-fora-prazo > span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 35px;
+  color: #fff;
+}
+
+.total-nips-analise {
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #896edb;
+  background-image: url("../img/bg-cards.png"), -webkit-gradient(linear, left top, right top, from(#896edb), color-stop(35%, #784bff), to(#b922e2));
+  background-image: url("../img/bg-cards.png"), linear-gradient(90deg, #896edb 0%, #784bff 35%, #b922e2 100%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.content-nips-analise {
+  text-align: center;
+}
+
+.content-nips-analise > span {
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1032,58 +1063,24 @@ td > .toggle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 35px;
-  color: #83858a;
-  margin: auto;
-}
-
-.total-nips-assis {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #212e4b;
-  border-radius: 50%;
-  margin: 20px auto;
-  position: relative;
-}
-
-.content-nips-assis {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.content-nips-assis > span {
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 35px;
-  color: #212e4b;
-  margin: auto;
+  color: #fff;
 }
 
 .total-nips {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #11C25D;
-  border-radius: 50%;
-  margin: 20px auto;
+  width: 100%;
+  border-radius: 7px;
   position: relative;
+  padding: 12px;
+  background: #3487a1;
+  background-image: url("../img/bg-cards.png"), -webkit-gradient(linear, left top, right top, from(#3487a1), color-stop(35%, #37a0b9), to(#1e9ac2));
+  background-image: url("../img/bg-cards.png"), linear-gradient(90deg, #3487a1 0%, #37a0b9 35%, #1e9ac2 100%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .content-nips {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%;
+  text-align: center;
 }
 
 .content-nips > span {
@@ -1098,25 +1095,24 @@ td > .toggle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 35px;
-  color: #11C25D;
-  margin: auto;
+  color: #fff;
 }
 
 .total-nips-importadas {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #799282;
-  border-radius: 50%;
-  margin: 20px auto;
+  width: 100%;
+  border-radius: 7px;
   position: relative;
+  padding: 12px;
+  background: #59a134;
+  background-image: url("../img/bg-cards.png"), -webkit-gradient(linear, left top, right top, from(#59a134), color-stop(35%, #37b944), to(#1ec23b));
+  background-image: url("../img/bg-cards.png"), linear-gradient(90deg, #59a134 0%, #37b944 35%, #1ec23b 100%);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .content-nips-importadas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%;
+  text-align: center;
 }
 
 .content-nips-importadas > span {
@@ -1135,24 +1131,24 @@ td > .toggle {
   margin: auto;
 }
 
-.total-nips-exportadas {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #499ED0;
-  border-radius: 50%;
-  margin: 20px auto;
-  position: relative;
-}
-
-.content-nips-exportadas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+.total-nips-import-sucess {
   width: 100%;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #59a134;
+  background-image: url("../img/bg-cards-2.png"), -webkit-gradient(linear, left top, right top, from(#59a134), color-stop(35%, #37b944), to(#1ec23b));
+  background-image: url("../img/bg-cards-2.png"), linear-gradient(90deg, #59a134 0%, #37b944 35%, #1ec23b 100%);
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-.content-nips-exportadas > span {
+.content-nips-import-sucess {
+  text-align: center;
+}
+
+.content-nips-import-sucess > span {
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1164,28 +1160,27 @@ td > .toggle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 35px;
-  color: #499ED0;
-  margin: auto;
+  color: #fff;
 }
 
-.total-nips-alerta {
-  width: 100px;
-  height: 100px;
-  border: 4px solid #cc092f;
-  border-radius: 50%;
-  margin: 20px auto;
-  position: relative;
-}
-
-.content-nips-alerta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+.total-nips-problem {
   width: 100%;
+  border-radius: 7px;
+  position: relative;
+  padding: 12px;
+  background: #af4b33;
+  background-image: url("../img/bg-cards-2.png"), -webkit-gradient(linear, left top, right top, from(#af4b33), color-stop(35%, #e42160), to(#c21e3d));
+  background-image: url("../img/bg-cards-2.png"), linear-gradient(90deg, #af4b33 0%, #e42160 35%, #c21e3d 100%);
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-.content-nips-alerta > span {
+.content-impor-problema {
+  text-align: center;
+}
+
+.content-impor-problema > span {
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1197,10 +1192,142 @@ td > .toggle {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 35px;
-  color: #cc092f;
-  margin: auto;
+  color: #fff;
 }
 
+.detalhes-nips {
+  cursor: pointer;
+}
+
+/* painel */
+/* accordion multilistas abertas painel */
+.accordion .card .card-header h6 button .options {
+  margin: 0 10px 3px 0;
+}
+
+.accordion .card .card-header h6 button .options > span {
+  background: #4d4e53;
+  width: 3px;
+  height: 3px;
+  margin-top: 4px;
+  display: block;
+  border-radius: 100px;
+}
+
+.accordion .card:last-of-type {
+  border-radius: 5px;
+  /* -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.17); */
+  border-bottom: 1px solid #d7d7d7;
+  border-color: #d7d7d7;
+}
+
+.accordion .card:last-of-type:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #d7d7d7;
+  border-color: #d7d7d7;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+}
+
+.accordion .card .card-header {
+  background: #F6F7FB;
+  margin-bottom: 0;
+  border-radius: 5px;
+  border-bottom: 0;
+}
+
+.accordion .card .card-body {
+  border-radius: 5px;
+  padding-bottom: 0;
+}
+
+#accordion .card .card-header h6 button {
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4d4e53;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.b-icon > button {
+  display: block;
+  position: relative;
+}
+
+.seta-accordion-painel {
+  position: absolute;
+  right: 15px;
+  background: url(../img/seta-accordion-painel.svg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  /* Equal to rotateZ(45deg) */
+  width: 20px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+}
+
+.b-icon > button[aria-expanded="true"] .seta-accordion-painel {
+  position: absolute;
+  right: 15px;
+  background: url(../img/seta-accordion-painel.svg);
+  width: 20px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+}
+
+.bar-geral {
+  position: absolute;
+  right: 15px;
+}
+
+.bar1, .bar2 {
+  width: 14px;
+  height: 2px;
+  background-color: #2e3e61;
+  margin: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.bar2 {
+  width: 14px;
+  opacity: 1;
+}
+
+.bar1 {
+  -webkit-transform: rotate(-90deg) translate(-3px, 0px);
+  transform: rotate(-90deg) translate(-3px, 0px);
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(0deg) translate(-3px, 0px);
+  transform: rotate(0deg) translate(-3px, 0px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+/* fim painel */
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   font-weight: 500;
   color: #212e4b;

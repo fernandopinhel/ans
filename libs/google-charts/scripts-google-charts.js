@@ -1,43 +1,63 @@
-// Tipo Assistencial/Nao Assistencial
+// Categorias
 google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChart1);
 
-function drawChart() {
+      function drawChart1() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Tipo', 'Valor'],
+          ['Assistênciais', 66],
+          ['Não Assistênciais', 13],          
+        ]);
+
+        var options = {
+          fontSize: 12,
+          legend: 'block',
+          legend: 'bottom',    
+          colors: ['#4a55b9', '#e04c4c'],
+          height: 400
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('nips2'));
+
+        chart.draw(data, options);
+      }
+// fim Categorias
+
+// Situação NIPS
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart5);
+
+function drawChart5() {
 
   var data = google.visualization.arrayToDataTable([
     ['Tipo', 'Valor'],
-    ['Assistenciais', 65],
-    ['Não Assistenciais', 35],
+    ['Dentro do Prazo', 66],
+    ['Fora do Prazo', 13],
+    ['Próximo do Prazo', 21]
   ]);
 
   var options = {
-    fontSize: 14,
-    backgroundColor: 'transparent',       
-    pieHole: 0.5,
-    pieSliceText: 'value',
-    pieSliceTextStyle: {
-      color: 'white',
-    },
+    fontSize: 12,
     legend: 'block',
     legend: 'bottom',    
-    colors: ['#212e4b', '#83858a'],
+    colors: ['#6dc711', '#e04c4c', '#f2ab1b'],
     height: 400
   };
   
-  var chart = new google.visualization.PieChart(document.getElementById('nips2'));
+  var chart = new google.visualization.PieChart(document.getElementById('nips3'));
   chart.draw(data, options);
 }
-// fim Tipo Assistencial/Nao Assistencial
+// fim situação NIPS
 
-// Tipo Exportação
+// Tipo Cadastro
 google.charts.load("current", {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart2);
 function drawChart2() {
   var data = google.visualization.arrayToDataTable([
     ["Tipo da Exportação", "Tipos", { role: "style" } ],    
-    ["Manualmente", 65, "#608918"],
-    ["Automaticamente", 35, "#149dc1"],
-    ["Pendente", 25, "#c86366"]
+    ["Automático", 65, "#11b4c7"],
+    ["Manual", 35, "#11c794"]    
   ]);
 
   var view = new google.visualization.DataView(data);
@@ -49,18 +69,18 @@ function drawChart2() {
     2]);
 
   var options = {
-    fontSize: 14,
+    fontSize: 12,
     backgroundColor: 'transparent',    
-    bar: {groupWidth: "25%"},          
+    bar: {groupWidth: "45%"},          
     legend: { position: "none" },    
     height: 400
   };
-  var chart = new google.visualization.ColumnChart(document.getElementById("tipos-class"));
+  var chart = new google.visualization.ColumnChart(document.getElementById("tipos-cadastro"));
   chart.draw(view, options);
 }
-// Fim Tipo Exportação
+// Fim Tipo Cadastro
 
-// Classificação NIPS
+// 
 google.charts.load("current", {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart3);
 function drawChart3() {
@@ -87,41 +107,36 @@ function drawChart3() {
   var chart = new google.visualization.ColumnChart(document.getElementById("nips"));
   chart.draw(view, options);
 }
-// Fim Classificação NIPS
+// Fim
 
 // Estatistica por Tema
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart4);
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawMultSeries);
 
-function drawChart4() {
-  var data = google.visualization.arrayToDataTable([
-    ['Mês/Ano', 'Gerenciamento das Ações de Saúde por Parte da Operadora', 'Rol de Procedimentos e Coberturas', 'Prazos Máximos para Atendimento', 'Reembolso', 'Rede de Atendimento'],
-    ['jan/20',  140, 100, 20, 50, 80],
-    ['fev/20',  100, 80, 120, 90, 35],
-    ['mar/20',  80, 50, 45, 95, 98],
-    ['abr/20',  60, 30, 25, 32, 100],
-    ['mai/20',  75, 35, 120, 140, 95],
-    ['jun/20',  65, 25, 70, 45, 35],
-    ['jul/20',  20, 28, 36, 49, 55],
-    ['ago/20',  90, 95, 135, 128, 132]
-  ]);
+function drawMultSeries() {
+      var data = google.visualization.arrayToDataTable([
+        ['Tipo', 'Valor'],
+        ['DIP, CPT, Agravo', 5],
+        ['Carência', 10],
+        ['Rede de Atendimento (Rede Conveniada)', 15],
+        ['Reembolso)', 20],
+        ['Prazos Máximos por Atendimento)', 25],
+        ['Prazos Máximos por Atendimento)', 30],
+        ['Rol de Procedimentos e Coberturas', 35],
+        ['Gerenciamento das Ações de Saúde por Parte da Operadora', 40]
+      ]);
 
-  var options = {
-    /*title: 'Company Performance',
-    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-    vAxis: {minValue: 0}*/
-    legend: 'block',
-    legend: 'bottom',  
-    fontSize: 14,
-    height: 400,    
-    chartArea: {
-      width: '90%'
-    },
-  };
+      var options = {
+        fontSize: 12,        
+        legend: { position: "none" },
+        height: 540,
+        backgroundColor: 'transparent'
+        // bar: {groupWidth: "20%"}
+      };
 
-  var chart = new google.visualization.AreaChart(document.getElementById('estatistica-tema'));
-  chart.draw(data, options);
-}
+      var chart = new google.visualization.BarChart(document.getElementById('estatistica-tema'));
+      chart.draw(data, options);
+    }
 // Fim Estatistica por Tema
 
 $(window).resize(function(){

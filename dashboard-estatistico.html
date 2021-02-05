@@ -234,118 +234,245 @@
                         <div class="bg-blank mb-4">
                             <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <div class="title-page">
+                                    <div class="title-page float-left">
                                         <h1>Dashboard Estatístico</h1>
+                                    </div>
+                                    <div class="float-right">
+                                        <a href="detalhes-dash-analista.html"class="detalhes-nips mr-2">
+                                            <img src="img/detalhes-nips.svg" width="35" alt="" data-toggle="tooltip" data-original-title="Detalhes">
+                                        </a>
+                                        <a href="#"class="detalhes-nips">
+                                            <img src="img/grafico-nips.svg" width="35" alt="" data-toggle="tooltip" data-original-title="">
+                                        </a>
                                     </div>
                                 </div>                               
                             </div> 
-                            <div class="row mt-4">
-                                <div class="col-lg-2">
-                                    <div class="form">
-                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-inicio" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                        <label for="dt-inicio" class="label-name">
-                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                            <span>Data Início</span>
-                                        </label>
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                <div class="card-header" role="tab" id="heading-1">
+                                    <h6 class="mb-0 b-icon">
+                                    <button class="btn btn-link d-flex align-items-center" onclick="toggleFunction(this)" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                        <div class="options">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>    
+                                        <div>Filtro</div>
+                                        <div class="bar-geral">
+                                            <div class="bar1"></div>
+                                            <div class="bar2"></div>
+                                        </div>
+                                    </button>
+                                    </h6>
+                                </div>
+                                <div id="collapse-1" class="collapse" role="tabpanel" aria-labelledby="heading-1" style="">
+                                    <div class="card-body">
+                                        <div class="row">                            
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                                                <div class="form">
+                                                    <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-inicio" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    <label for="dt-inicio" class="label-name">
+                                                        <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                        <span>Data Início</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="space"></div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                                                <div class="form">
+                                                    <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                                    <label for="dt-fim" class="label-name">
+                                                        <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                                        <span>Data Fim</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="space"></div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-8 mt-3">
+                                                <button type="button" name="button"  class="btn btn-buscar mr-2">Buscar</button>                                    
+                                                <button type="reset" value="Reset" name="button" class="btn btn-limpar">Limpar</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="space"></div>
-                                <div class="col-lg-2">
-                                    <div class="form">
-                                        <input class="form-control form_date input-date" size="16" type="text" value="" maxlength="10" name="dt-fim" onkeypress="mascaraData(this, event)" autocomplete="off">
-                                        <label for="dt-fim" class="label-name">
-                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                            <span>Data Fim</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="space"></div>
-                                <div class="col-lg-4 mt-3">
-                                    <button type="button" name="button"  class="btn btn-buscar mr-2">Buscar</button>                                    
-                                    <button type="reset" value="Reset" name="button" class="btn btn-limpar">Limpar</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-blank mb-4">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="box-periodo">
-                                            <p>Período: 17/07/2020 - 17/09/2020</p>
-                                            <hr>
-                                        </div>
-                                    </div>      
-                                    <div class="space6"></div>          
-                                    <div class="col-lg-1"></div>                
-                                    <div class="col-lg-2">
-                                        <h6 class="title-dash color-green-2 color-nips">Total de <br>NIPs</h6>
-                                        <div class="total-nips">
-                                            <div class="content-nips">
-                                                <span>50</span>
-                                            </div>
+                        <div class="bg-blank mb-4">                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="box-periodo">
+                                        <p>Período: 17/07/2020 a 17/09/2020</p>
+                                        <hr>
+                                    </div>
+                                </div>      
+                                <div class="space6"></div>                  
+                                <div class="col-lg-2">
+                                    <div class="total-nips">
+                                        <h6 class="title-dash color-green-2 color-nips">Total Importado</h6>
+                                        <div class="content-nips">
+                                            <span>30</span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
-                                        <h6 class="title-dash color-expor">Total de NIPs Exportadas</h6>
-                                        <div class="total-nips-exportadas">
-                                            <div class="content-nips-exportadas">
-                                                <span>48</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <h6 class="title-dash color-alerta">Total de NIPs com Alerta</h6>
-                                        <div class="total-nips-alerta">
-                                            <div class="content-nips-alerta">
-                                                <span>2</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <h6 class="title-dash color-nips-assistenciais">Total de NIPs Assistenciais</h6>
-                                        <div class="total-nips-assis">
-                                            <div class="content-nips-assis">
-                                                <span>25</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <h6 class="title-dash color-nips-nao-assistenciais">Total de NIPs Não Assistenciais</h6>
-                                        <div class="total-nips-nao-assis">
-                                            <div class="content-nips-nao-assis">
-                                                <span>5</span>
-                                            </div>
-                                        </div>
-                                    </div>       
                                 </div>
-                            </div>                            
+                                <div class="col-lg-3">
+                                    <div class="total-nips-import-sucess">
+                                        <h6 class="title-dash color-import-sucess">Importado com Sucesso</h6>
+                                        <div class="content-nips-import-sucess">
+                                            <span>28</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="total-nips-problem">
+                                        <h6 class="title-dash color-import-problema">Importado com problema</h6>
+                                        <div class="content-impor-problema">
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="total-nips-analise">
+                                        <h6 class="title-dash color-nips-analise">Em análise</h6>
+                                        <div class="content-nips-analise">
+                                            <span>25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="total-nips-fora">
+                                        <h6 class="title-dash color-nips-fora-prazo">Fora do Prazo</h6>
+                                        <div class="content-nips-fora-prazo">
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>       
+                            </div>
                         </div>                        
-                        <div class="container-fluid mb-4">                                
-                            <div class="row mt-3">
-                                <div class="col-lg-6 pl-0">
-                                    <div class="bg-blank">
-                                        <h6 class="title-dash">Total por Classificação</h6>
-                                        <div class="chart" id="nips2"></div>                                        
-                                    </div>                                        
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <div class="bg-blank">
+                                    <h6 class="title-dash">Categoria</h6>
+                                    <div class="chart" id="nips2"></div>                                        
+                                </div>                                        
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="bg-blank">
+                                    <h6 class="title-dash">Situação das NIPs</h6>
+                                    <div class="chart" id="nips3"></div>                                        
+                                </div>                                        
+                            </div>
+                            <div class="col-lg-3">                                        
+                                <div class="bg-blank">
+                                    <h6 class="title-dash">Tipo Cadastro</h6>
+                                    <div class="chart" id="tipos-cadastro"></div>                                        
                                 </div>
-                                <div class="col-lg-6 pr-0">                                        
-                                    <div class="bg-blank">
-                                        <h6 class="title-dash">Total por Exportação</h6>
-                                        <div class="chart" id="tipos-class"></div>                                        
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6">      
+                                <div class="bg-blank">                                  
+                                    <h6 class="title-dash">Tema</h6>
+                                    <div class="chart" id="estatistica-tema"  style="width: 100%;"></div>                                        
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="bg-blank">
+                                    <h6 class="title-dash">Nips</h6>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>  
+                                                    <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Protocolo ANS</th>
+                                                    <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Tema</th>
+                                                    <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Categoria</th>
+                                                    <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Situação</th>
+                                                    <th><a href="#" class="sort-2"><img src="img/sort-1.svg" alt=""></a>Analista</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="detalhes-dash-analista.html">
+                                                            <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        </a>
+                                                    </td>
+                                                    <td>12211111</td>
+                                                    <td>Gerenciamento das ações de Saúde por Parte da Operadora</td>
+                                                    <td>Assistêncial</td>
+                                                    <td>Recebida</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="detalhes-dash-analista.html">
+                                                            <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        </a>
+                                                    </td>
+                                                    <td>232323232</td>
+                                                    <td>Rol de Procedimentos e Coberturas</td>
+                                                    <td>Não Assistêncial</td>
+                                                    <td>Em análise</td>
+                                                    <td>M2532533</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="detalhes-dash-analista.html">
+                                                            <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        </a>
+                                                    </td>
+                                                    <td>312112121</td>
+                                                    <td>Prazos Máximos por atendimento</td>
+                                                    <td>Assistêncial</td>
+                                                    <td>Em atraso</td>
+                                                    <td>G1232222</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="detalhes-dash-analista.html">
+                                                            <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        </a>
+                                                    </td>
+                                                    <td>212121</td>
+                                                    <td>Reembolso</td>
+                                                    <td>Não Assistêncial</td>
+                                                    <td>Respondida</td>
+                                                    <td>G1232222</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="detalhes-dash-analista.html">
+                                                            <img src="img/detalhes.svg" class="i-detalhes" title="" data-toggle="tooltip" data-original-title="Detalhes">
+                                                        </a>
+                                                    </td>
+                                                    <td>2121212121</td>
+                                                    <td>Rede de Atendimento (Rede Conveniada)</td>
+                                                    <td>Assistêncial</td>
+                                                    <td>Cancelada</td>
+                                                    <td>G523333</td>
+                                                </tr>
+                                                <tr class="separator">
+                                                    <td colspan="5"></td>
+                                                </tr>                                      
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                        </div>                            
-                        <div class="bg-blank mb-4">
-                            <div class="container-fluid">
-                                <div class="row mt-3">
-                                    <div class="col-lg-12">                                        
-                                        <h6 class="title-dash">Estatística por Tema</h6>
-                                        <div class="chart" id="estatistica-tema" ></div>                                        
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
+                        </div>         
                     </div>
                 </form>
             </div>
