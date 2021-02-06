@@ -201,7 +201,7 @@
             <!-- fim sidebar -->
 
             <!-- conteudo pagina -->
-            <div class="content" id="busca-unidade-de-medida">
+            <div class="content">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid p-0">
                         <div class="float-left">
@@ -234,9 +234,12 @@
                         <div class="bg-blank mb-4">
                             <div class="row mb-3">
                                 <div class="col-lg-12">
-                                    <div class="title-page">
+                                    <div class="title-page float-left">
                                         <h1>Detalhes NIPS</h1>
                                     </div>
+                                    <a href="#" class="float-right">
+                                        <img src="img/print.svg" width="30" data-toggle="tooltip" data-original-title="Imprimir">
+                                    </a>
                                 </div>                               
                             </div> 
                             <div class="row">
@@ -288,86 +291,197 @@
                                 </div>
                             </div>   
                             <div class="row mt-4">
-                                <div class="col-12">
+                                <div class="col-12 mb-3">
                                   <h6 class="txt-up">Dados do Segurado</h6>
                                   <hr>
                                 </div>
                                 <div class="col-lg-3">
-                                    <p>Nome: Jorge Pereira</p>
+                                    <div class="form">
+                                        <input type="text" value="Jorge Pereira" name="nome-usuario" autocomplete="off" class="used">
+                                        <label for="nome-usuario" class="label-name">
+                                            <span class="content-name">Nome</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input type="text" value="082.025.325-00" name="cpf" autocomplete="off" class="used">
+                                        <label for="cpf" class="label-name">
+                                            <span class="content-name">CPF</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input type="text" value="773984005707001" name="cartao-segurado" autocomplete="off" class="used">
+                                        <label for="cartao-segurado" class="label-name">
+                                            <span class="content-name">Cartão Segurado</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date used" size="16" type="text" value="10/05/1975" maxlength="10" name="dt-nasc" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-nasc" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data de Nascimento</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>CPF: 082.025.325-00</p>
+                                    <div class="radio-title">
+                                        <h6 class="mt-1 mb-3">Sexo</h6>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="ex-radio mr-4">
+                                            <input type="radio" id="masc" name="radio_group" checked>
+                                            <label for="radio-estilo" class="radio-estilo">Masculino</label>
+                                        </div>
+                                        <div class="ex-radio">
+                                            <input type="radio" id="fem" name="radio_group">
+                                            <label for="radio-estilo" class="radio-estilo">Feminino</label>
+                                            </div>
+                                    </div>
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <div class="form">
+                                        <input type="text" value="Rua Dias da Cruz , 525 , Casa 01" name="endereco" autocomplete="off" class="used">
+                                        <label for="endereco" class="label-name">
+                                            <span class="content-name">Endereço</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Cartão Segurado: 773984005707001</p>
+                                    <div class="form">
+                                        <input type="text" value="Méier" name="bairro" autocomplete="off" class="used">
+                                        <label for="bairro" class="label-name">
+                                            <span class="content-name">Bairro</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-2">
+                                    <div class="form">
+                                        <input type="text" value="22523-210" name="cep" autocomplete="off" class="used">
+                                        <label for="cep" class="label-name">
+                                            <span class="content-name">CEP</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Data de Nascimento: 10/05/1975</p>
+                                    <div class="form">
+                                        <input type="text" value="Rio de Janeiro" name="municipio" autocomplete="off" class="used">
+                                        <label for="municipio" class="label-name">
+                                            <span class="content-name">Município</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Sexo: Masculino</p>
+                                    <div class="form">
+                                        <input type="text" value="Rio de Janeiro" name="cidade" autocomplete="off" class="used">
+                                        <label for="cidade" class="label-name">
+                                            <span class="content-name">Cidade</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
+                                <div class="col-lg-1">
+                                    <p class="p-select">UF</p>
+                                    <select class="form-control">
+                                        <option>Selecione</option>
+                                        <option value="1" selected>RJ</option>                                 
+                                    </select>
+                                </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Endereço: Rua Dias da Cruz , 525 , Casa 01</p>
+                                    <div class="form">
+                                        <input type="text" value="(21) 22223-2102" name="tel" autocomplete="off" class="used">
+                                        <label for="tel" class="label-name">
+                                            <span class="content-name">Telefone</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Bairro: Méier</p>
+                                    <div class="form">
+                                        <input type="email" value="teste@teste.com.br" name="email" autocomplete="off" class="used">
+                                        <label for="email" class="label-name">
+                                            <span class="content-name">E-mail</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
-                                <div class="col-lg-3">
-                                    <p>CEP: 22523-210</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p>Município: Rio de Janeiro</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p>Cidade: Rio de Janeiro</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p>Estado: RJ</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p>Telefone: (21) 22223-2102</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p>E-mail: teste@teste.com.br</p>
-                                </div>
-                                <div class="col-12 mt-4">
+                                <div class="col-12 mt-3 mb-3">
                                     <h6 class="txt-up">Dados do Interlocutor</h6>
                                     <hr>
                                 </div>
                                 <div class="col-lg-3">
-                                    <p>Nome: Jorge Pereira</p>
+                                    <div class="form">
+                                        <input type="text" value="Jorge Pereira" name="nome-usuario" autocomplete="off" class="used">
+                                        <label for="nome-usuario" class="label-name">
+                                            <span class="content-name">Nome</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
+                                <div class="space"></div>
                                 <div class="col-lg-3">
-                                    <p>Telefone: (21) 22223-2102</p>
+                                    <div class="form">
+                                        <input type="text" value="(21) 22223-2102" name="tel" autocomplete="off" class="used">
+                                        <label for="tel" class="label-name">
+                                            <span class="content-name">Telefone</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
-                                <div class="col-lg-3">
-                                    <p>E-mail: teste@teste.com.br</p>
-                                </div>
-                                <div class="col-12 mt-4">
+                                <div class="space"></div>
+                                <div class="col-12 mt-4 mb-3">
                                     <h6 class="txt-up">Descrição NIP</h6>
                                     <hr>
                                 </div>
-                                <div class="col-lg-12">
-                                    <p>
-                                        Beneficiário questiona o não atendimento para os procedimentos:30725151 - TRATAMENTO CIRÚRGICO DA PSEUDOARTROSE COM OU SEM FIXADOR EXTERNO (DINÂMICO OU NÃO), 30732026 AUTOENXERTO ÓSSEO, 30725020 - ALONGAMENTO DE FÊMUR - TRATAMENTO CIRÚRGICO, nome do médico solicitante Patrick Godin . A solicitação foi feita à operadora no inicio do mês de Maio, para realização no município Brasília no hospital Santa Lucia e a operadora negou alegando que o médico não justificou os códigos, sendo que o beneficiário alega que o médico encaminhou o relatório médico justificando. Protocolo: 00571120200528018231 Data: 28/05/2020. Solicita análise da Agência.
-                                    </p>
+                                <div class="space"></div>
+                                <div class="col-lg-12 mt-3">
+                                    <label for="observacoes" class="observacoes">Descrição</label>
+                                    <textarea class="form-control" id="observacoes" rows="4">Beneficiário questiona o não atendimento para os procedimentos:30725151 - TRATAMENTO CIRÚRGICO DA PSEUDOARTROSE COM OU SEM FIXADOR EXTERNO (DINÂMICO OU NÃO), 30732026 AUTOENXERTO ÓSSEO, 30725020 - ALONGAMENTO DE FÊMUR - TRATAMENTO CIRÚRGICO, nome do médico solicitante Patrick Godin . A solicitação foi feita à operadora no inicio do mês de Maio, para realização no município Brasília no hospital Santa Lucia e a operadora negou alegando que o médico não justificou os códigos, sendo que o beneficiário alega que o médico encaminhou o relatório médico justificando. Protocolo: 00571120200528018231 Data: 28/05/2020. Solicita análise da Agência.</textarea>
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="space"></div>
+                                <div class="col-12 mt-4 mb-3">
+                                    <h6 class="txt-up">Categoria</h6>
+                                    <hr>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form">
+                                        <input type="text" value="Assistêncial" name="tema" autocomplete="off" class="used">
+                                        <label for="categoria" class="label-name">
+                                            <span class="content-name">Categoria (assistêncial / não assistêncial)</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="col-12 mt-4 mb-3">
                                     <h6 class="txt-up">Tema</h6>
                                     <hr>
                                 </div>
-                                <div class="col-lg-12">
-                                    <p>Tema: Produto ou Plano >> Cobertura >> Gerenciamento das Ações de Saúde por Parte da Operadora (autorizações prévias, franquia, co-participação e outros)</p>
+                                <div class="col-lg-4">
+                                    <div class="form">
+                                        <input type="text" value="Tema" name="tema" autocomplete="off" class="used">
+                                        <label for="tema" class="label-name">
+                                            <span class="content-name">Tema</span>
+                                        </label>
+                                    </div>                                 
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="col-12 mt-4 mb-3">
                                     <h6 class="txt-up">Área</h6>
                                     <hr>
                                 </div>
                                 <div class="space"></div>
                                 <div class="col-lg-4">
                                     <p class="p-select">Selecionar Área</p>
-                                    <select class="form-control" disabled>
+                                    <select class="form-control" >
                                         <option data-display="Selecione">Selecione</option>
                                         <option value="1" selected>GESTÃO DE REDE MEDISERVICE</option>                                                                           
                                     </select>
@@ -376,24 +490,90 @@
                                     <h6 class="txt-up">Respostas as Perguntas Obrigatórias</h6>
                                     <hr>
                                 </div>
-                                <div class="col-lg-12">
-                                    <p>Data da solicitação do consumidor à Operadora: 01/05/2020</p>
-                                    <p>Houve impedimento para realização de algum procedimento ou falta de resposta da operadora ao consumidor? (S/N): Sim</p>
-                                    <p>Há previsão do mecanismo no contrato, regulamento ou equivalente? (S/N): Não</p>
-                                    <p>Estado (UF) onde o Consumidor precisou de atendimento: DF</p>
-                                    <p>Município onde o Consumidor precisou de atendimento: BRASILIA</p>
-                                    <p>Foi solicitado o motivo da negativa por escrito:: Não</p>
-                                    <p>Se sim, o documento foi fornecido em até 48h: Não</p>
-                                    <p>Nº de protocolo junto à operadora: 00571120200528018231</p>
+                                <div class="col-lg-4">
+                                    <div class="form">
+                                        <input class="form-control form_date input-date used" size="16" type="text" value="01/05/2020" maxlength="10" name="dt-solic" onkeypress="mascaraData(this, event)" autocomplete="off">
+                                        <label for="dt-solic" class="label-name">
+                                            <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                            <span>Data da solicitação do consumidor à Operadora</span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="space"></div>
+                                <div class="col-lg-8">
+                                    <p class="p-select">Houve impedimento para realização de algum procedimento ou falta de resposta da operadora ao consumidor? (S/N)</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Sim</option>                                                                           
+                                        <option value="2">Não</option>                                                                           
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-5">
+                                    <p class="p-select">Há previsão do mecanismo no contrato, regulamento ou equivalente? (S/N)</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1">Sim</option>                                                                           
+                                        <option value="2" selected>Não</option>                                                                           
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Estado (UF) onde o Consumidor precisou de atendimento</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1" selected>DF</option>                                                                                                                                                 
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-3">
+                                    <div class="form">
+                                        <input type="text" value="Brasília" name="municipio" autocomplete="off" class="used">
+                                        <label for="municipio" class="label-name">
+                                            <span class="content-name">Município</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Foi solicitado o motivo da negativa por escrito?</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1">Sim</option>     
+                                        <option value="2" selected>Não</option>                                                                                                                                                 
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Se sim, o documento foi fornecido em até 48h?</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1">Sim</option>     
+                                        <option value="2" selected>Não</option>                                                                                                                                                 
+                                    </select>
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-lg-4">
+                                    <div class="form">
+                                        <input type="text" value="00571120200528018231" name="n-protocolo" autocomplete="off" class="used">
+                                        <label for="n-protocolo" class="label-name">
+                                            <span class="content-name">Nº de protocolo junto à operadora</span>
+                                        </label>
+                                    </div>                                 
+                                </div>
+                                <div class="space"></div>
+                                <div class="col-12 mt-2 mb-3">
                                     <h6 class="txt-up">Situação</h6>
                                     <hr>
                                 </div>
-                                <div class="col-12">
-                                    <p>PENDENTE</p>
+                                <div class="col-lg-4">
+                                    <p class="p-select">Situação</p>
+                                    <select class="form-control" >
+                                        <option>Selecione</option>
+                                        <option value="1" selected>Pendente</option>                                                                           
+                                    </select>
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="col-12 mt-4 mb-3">
                                     <h6 class="txt-up">Arquivo Notificação</h6>
                                     <hr>
                                 </div>
@@ -405,6 +585,9 @@
                             <div class="row btns-opcoes">
                                 <div class="col-lg-12">
                                     <button type="button" data-toggle="tooltip" data-placement="top" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='dashboard-analista.html'" name="button" class="btn btn-voltar float-left mr-2">Voltar</button>                                                                
+                                    <button type="button" value="voltar" name="button" class="btn btn-info float-left mr-2">Corrigir NIP</button>    
+                                    <button type="button" value="voltar" name="button" class="btn btn-secondary float-left mr-2">Responder NIP</button>                                                                
+                                    <button type="button" value="voltar" name="button" class="btn btn-salvar float-right mr-2">Salvar NIP</button>                                                                
                                 </div>
                             </div>
                         </div>

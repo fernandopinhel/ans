@@ -22,6 +22,8 @@
 
 // fim fonts
 
+html{scroll-behavior: smooth;}
+
 // variaveis sass
 $bg-color: #f4f4f6;
 $bg-medium: #2e3e61;
@@ -243,6 +245,12 @@ strong, b{font-weight: bold;}
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+}
+
+.btn-info, .btn-secondary{
+    border-radius: 100px !important;
+    // transition: $transition;
+    letter-spacing: 2px !important;
 }
 
 .btn-buscar{

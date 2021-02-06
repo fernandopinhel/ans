@@ -16,6 +16,10 @@
   src: url(../fonts/bradesco-sans/BradescoSans-Regular.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bradesco Sans', sans-serif;
   font-weight: 500;
@@ -253,6 +257,11 @@ strong, b {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+
+.btn-info, .btn-secondary {
+  border-radius: 100px !important;
+  letter-spacing: 2px !important;
 }
 
 .btn-buscar {
