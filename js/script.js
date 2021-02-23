@@ -1,3 +1,8 @@
+$(".resp-nip").addClass("d-none");
+$(".btn-resp-nip").click(function(){
+    $(".resp-nip").removeClass("d-none");
+});
+
 $('#datepickerHorasMinutos').datetimepicker({
     language:  'pt-BR',    
     format: 'HH:ii',    

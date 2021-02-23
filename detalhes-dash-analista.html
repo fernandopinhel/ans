@@ -45,7 +45,7 @@
                                     <span class="item-menu">Dashboard Analista</span>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#exportarNipsPlusoftSubmenu" onclick="window.location.href='exportar-nips-plusoft.html'" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                                     <i class="icon icon-nav-exportar mr-4"></i>
                                     <span class=" item-menu">Exportar NIPs para Plusoft</span>                                    
@@ -95,10 +95,11 @@
                                         <a href="gerar-relatorio-exportacao-automatica.html">Gerar Excel</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </li><!-- fim painel -->
-                    <li><!-- configuracoes -->
+                    <!-- configuracoes -->
+                    <!-- <li>
                         <a href="#configuracoesSubmenu" id="configuracoes-submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">                            
                             <span class="item-menu">Configurações</span>
                             <span class="seta-accordion"></span>
@@ -195,7 +196,8 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li><!-- fim configuracoes -->
+                    </li> -->
+                    <!-- fim configuracoes -->
                 </ul>                
             </nav>
             <!-- fim sidebar -->
@@ -440,13 +442,12 @@
                                     </div>                                 
                                 </div>
                                 <div class="space"></div>
-                                <div class="col-12 mt-4 mb-3">
+                                <div class="col-12 mt-4">
                                     <h6 class="txt-up">Descrição NIP</h6>
                                     <hr>
                                 </div>
-                                <div class="space"></div>
-                                <div class="col-lg-12 mt-3">
-                                    <label for="observacoes" class="observacoes">Descrição</label>
+                                <div class="col-lg-12">
+                                    <!-- <label for="observacoes" class="observacoes">Descrição</label> -->
                                     <textarea class="form-control" id="observacoes" rows="4">Beneficiário questiona o não atendimento para os procedimentos:30725151 - TRATAMENTO CIRÚRGICO DA PSEUDOARTROSE COM OU SEM FIXADOR EXTERNO (DINÂMICO OU NÃO), 30732026 AUTOENXERTO ÓSSEO, 30725020 - ALONGAMENTO DE FÊMUR - TRATAMENTO CIRÚRGICO, nome do médico solicitante Patrick Godin . A solicitação foi feita à operadora no inicio do mês de Maio, para realização no município Brasília no hospital Santa Lucia e a operadora negou alegando que o médico não justificou os códigos, sendo que o beneficiário alega que o médico encaminhou o relatório médico justificando. Protocolo: 00571120200528018231 Data: 28/05/2020. Solicita análise da Agência.</textarea>
                                 </div>
                                 <div class="space"></div>
@@ -581,12 +582,21 @@
                                     <p>Notificação <a href="#"><img src="img/pdf.svg" width="30px" height="30px" alt=""></a></p>
                                 </div>
                                 <div class="space"></div>
+                                <div class="col-12 resp-nip">
+                                    <h6 class="txt-up">Responder NIP</h6>
+                                    <hr>
+                                </div>
+                                
+                                <div class="col-lg-12 mb-5 resp-nip">
+                                    <!-- <label for="observacoes" class="observacoes">Resposta</label> -->
+                                    <textarea class="form-control" id="observacoes" rows="4"></textarea>
+                                </div>
                             </div>
                             <div class="row btns-opcoes">
                                 <div class="col-lg-12">
                                     <button type="button" data-toggle="tooltip" data-placement="top" data-original-title="Voltar para Consulta" value="voltar" onclick="window.location.href='dashboard-analista.html'" name="button" class="btn btn-voltar float-left mr-2">Voltar</button>                                                                
                                     <button type="button" value="voltar" name="button" class="btn btn-info float-left mr-2">Corrigir NIP</button>    
-                                    <button type="button" value="voltar" name="button" class="btn btn-secondary float-left mr-2">Responder NIP</button>                                                                
+                                    <button type="button" value="voltar" name="button" class="btn btn-secondary float-left mr-2 btn-resp-nip">Responder NIP</button>                                                                
                                     <button type="button" value="voltar" name="button" class="btn btn-salvar float-right mr-2">Salvar NIP</button>                                                                
                                 </div>
                             </div>
