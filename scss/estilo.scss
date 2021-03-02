@@ -1142,6 +1142,35 @@ td > .toggle{
     font-weight: 600 !important;
     font-size: 15px !important;
 }
+
+.bg-title{
+    background: #f6f6f6;
+    padding: .25rem;
+    padding: 10px;
+}
+
+.bg-action-icon:hover{
+    width: 50px;
+    height: 50px;
+    background: #499ED0;
+    border: 1px solid #499ED0;
+    padding: 9px;
+    border-radius: 20%;
+    transition: $transition;
+    cursor: pointer;
+}
+
+.bg-action-icon{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #f2f2f2;
+    padding: 9px;
+    border-radius: 20%;
+    transition: $transition;
+    cursor: pointer;
+}
+
 // fim globais
 
 // conteudo
@@ -1824,7 +1853,7 @@ input:focus ~ label, input.used ~ label {
 
 input:disabled {    
     background: transparent !important;
-    padding: 0 !important;
+    padding: 5px !important;
     position: relative !important;
     // top: 10px !important;
 }

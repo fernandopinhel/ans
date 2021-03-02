@@ -1374,6 +1374,36 @@ td > .toggle {
   font-size: 15px !important;
 }
 
+.bg-title {
+  background: #f6f6f6;
+  padding: .25rem;
+  padding: 10px;
+}
+
+.bg-action-icon:hover {
+  width: 50px;
+  height: 50px;
+  background: #499ED0;
+  border: 1px solid #499ED0;
+  padding: 9px;
+  border-radius: 20%;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+
+.bg-action-icon {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #f2f2f2;
+  padding: 9px;
+  border-radius: 20%;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+
 .consulta-negociacao, .consulta-itens-selecionados {
   background: #fff;
   padding: 20px 2px 0 2px;
@@ -2066,7 +2096,7 @@ input:focus ~ label, input.used ~ label {
 
 input:disabled {
   background: transparent !important;
-  padding: 0 !important;
+  padding: 5px !important;
   position: relative !important;
 }
 
