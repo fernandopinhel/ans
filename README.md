@@ -6,7 +6,7 @@
 
 **Case de UX/UI e front-end: triagem das NIPs da ANS, as reclamações de beneficiários que chegam a uma operadora de saúde com prazo para resposta.**
 
-![HTML, CSS e JS puros](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS%20puros-5f3696)
+![HTML, CSS e JS puros](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS%20puros-0a6a9e)
 ![WCAG 2.2 AA](https://img.shields.io/badge/acessibilidade-WCAG%202.2%20AA-1b7343)
 ![Sem dependências](https://img.shields.io/badge/dependências%20de%20runtime-0-575066)
 
@@ -96,7 +96,7 @@ Criar um sistema interno para a equipe de relacionamento com a ANS, onde:
 ### Um layout só deste case
 
 Os outros cases do portfólio usam um menu lateral claro (OPME) e uma barra de operações no
-topo (Sinistro Auto). Este usa um **trilho escuro e estreito**, com ícones e rótulos curtos,
+topo (Sinistro Auto). Este usa um **trilho claro e estreito**, com ícones e rótulos curtos,
 como as gavetas de uma mesa de triagem, para deixar o máximo de espaço para a fila e a ficha.
 Os elementos visuais vêm do domínio: o **carimbo** do protocolo, a **régua** de dias úteis, o
 **relógio** dos prazos e o **marca-texto** nas palavras do relato. No celular, o trilho vira
@@ -107,9 +107,9 @@ uma gaveta com os nomes completos e a ficha da NIP ocupa a tela inteira.
 **Acolhe Saúde** é uma operadora inventada para o case. O nome vem de *acolher*: uma
 reclamação na ANS é, antes de tudo, alguém pedindo ajuda.
 
-O símbolo é um **balão de fala** com um **visto em coral**: a reclamação que chega e a
+O símbolo é um **balão de fala** com um **visto em verde-menta**: a reclamação que chega e a
 reclamação que recebe resposta. Ele funciona como favicon e aparece no trilho e no login. A
-paleta usa ameixa nos tons escuros e coral como destaque.
+paleta usa azul-clarinho e verde-menta, cores que lembram clínica e cuidado, com azul-marinho só no login.
 
 ### Revisitando o case
 
@@ -118,7 +118,7 @@ Bootstrap e jQuery, todas só visuais, com dados fixos e a marca do cliente. Ago
 
 - **Tudo funciona de ponta a ponta**: importar, corrigir, classificar, encaminhar, responder, cancelar, enviar ao CRM e gerar relatórios.
 - **As 40 telas viraram 9**, sem perder nenhuma função: consultar, cadastrar, editar e ver detalhes passaram a ser a mesma tela, e relatório e planilha também.
-- **Um design system próprio**, claro e suave, com login e trilho escuros, sem framework de CSS.
+- **Um design system próprio**, claro e suave em azul e verde-menta, com login escuro, sem framework de CSS.
 - **Acessibilidade revisada para a WCAG 2.2 AA**, verificada com axe em todas as telas.
 - **Textos mais próximos e humanos**, com mensagens de erro que explicam como corrigir.
 - **Zero dependências de runtime**: saíram Bootstrap, jQuery, Popper, nice-select, datetimepicker, os ícones e as fontes da marca original e cerca de 22 MB de arquivos.
@@ -326,8 +326,8 @@ O GitHub Pages não permite definir cabeçalhos HTTP, por isso a CSP vai em `<me
 
 ### 2026-10: Case revisitado
 
-- Operadora fictícia Acolhe Saúde, com símbolo de balão de fala e visto em coral, no lugar da marca do cliente original.
-- Reescrita completa em HTML, CSS e JavaScript puros, com layout próprio (trilho e mesa de triagem), visual claro e suave e login escuro.
+- Operadora fictícia Acolhe Saúde, com símbolo de balão de fala e visto em verde-menta, no lugar da marca do cliente original.
+- Reescrita completa em HTML, CSS e JavaScript puros, com layout próprio (trilho e mesa de triagem), visual claro em azul-clarinho e verde-menta e login escuro.
 - Fluxos funcionais de ponta a ponta: importação, correção, triagem com sugestão de área, aviso por e-mail, resposta à ANS, envios ao CRM, relatórios e 6 regras de triagem.
 - As cerca de 40 telas originais viraram 9.
 - Acessibilidade revisada para a WCAG 2.2 AA, verificada com axe.

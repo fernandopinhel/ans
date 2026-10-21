@@ -2,13 +2,13 @@
   <title>Acolhe Saúde</title>
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8a5fcf"/>
-      <stop offset="1" stop-color="#3a1d5c"/>
+      <stop offset="0" stop-color="#4fb0e3"/>
+      <stop offset="1" stop-color="#0a5a88"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#g)"/>
   <!-- Balão de fala: a reclamação que chega -->
   <path d="M14 17.5A5.5 5.5 0 0 1 19.5 12h25a5.5 5.5 0 0 1 5.5 5.5v17a5.5 5.5 0 0 1-5.5 5.5H30.5L21 49.5V40h-1.5a5.5 5.5 0 0 1-5.5-5.5z" fill="#fff"/>
-  <!-- Visto em coral: a reclamação que recebe resposta -->
-  <path d="m23.5 26.5 5.5 5.5 11.5-11.5" fill="none" stroke="#ff8a65" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Visto em verde-menta: a reclamação que recebe resposta -->
+  <path d="m23.5 26.5 5.5 5.5 11.5-11.5" fill="none" stroke="#12a27a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
