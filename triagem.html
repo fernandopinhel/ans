@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5f3696">
+    <meta name="description" content="Fila e ficha das NIPs no sistema Triagem NIP.">
+    <title>Mesa de triagem | Triagem NIP</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="rail"></div>
+      <header class="appbar"></header>
+
+      <main class="content" id="conteudo" tabindex="-1">
+        <div class="page-head">
+          <div class="page-head__text">
+            <span class="eyebrow">Operação</span>
+            <h1 id="pagina-titulo">Mesa de triagem</h1>
+            <p>Classifique, encaminhe e responda as NIPs dentro do prazo da ANS.</p>
+          </div>
+          <div class="page-head__actions">
+            <button class="btn" id="importar" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-cloud-download"/></svg> Buscar novas NIPs na ANS</button>
+            <a class="btn btn--primary" href="nip.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-plus"/></svg> Cadastrar NIP</a>
+          </div>
+        </div>
+
+        <div class="mesa" id="mesa">
+          <section class="card mesa__fila" aria-labelledby="fila-titulo">
+            <div class="mesa__fila-head">
+              <h2 id="fila-titulo">Fila</h2>
+              <form class="mesa__busca" id="busca" role="search" novalidate>
+                <label class="visually-hidden" for="busca-texto">Buscar por protocolo, beneficiário ou CPF</label>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-search"/></svg>
+                <input class="input" id="busca-texto" name="busca" type="search" placeholder="Protocolo, nome ou CPF" autocomplete="off" spellcheck="false">
+              </form>
+              <div class="chips" id="chips" role="group" aria-label="Filtrar por situação"></div>
+              <div class="mesa__opcoes">
+                <label class="choice" for="so-minhas"><input type="checkbox" id="so-minhas"> Só as minhas</label>
+                <span>
+                  <label class="visually-hidden" for="ordem">Ordenar a fila</label>
+                  <select class="select" id="ordem">
+                    <option value="prazo">Prazo mais curto</option>
+                    <option value="recentes">Chegaram por último</option>
+                    <option value="nome">Nome do beneficiário</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <ul class="fila" id="fila" aria-labelledby="fila-titulo"></ul>
+          </section>
+
+          <section class="card mesa__detalhe" id="detalhe" tabindex="-1" aria-label="Ficha da NIP"></section>
+        </div>
+      </main>
+
+      <footer class="app-footer"></footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/triagem.js"></script>
+  </body>
+</html>

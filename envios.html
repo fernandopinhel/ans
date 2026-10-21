@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5f3696">
+    <meta name="description" content="Envio das NIPs triadas para o CRM de relacionamento.">
+    <title>Envios ao CRM | Triagem NIP</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="rail"></div>
+      <header class="appbar"></header>
+
+      <main class="content" id="conteudo" tabindex="-1">
+        <div class="page-head">
+          <div class="page-head__text">
+            <span class="eyebrow">Operação</span>
+            <h1 id="pagina-titulo">Envios ao CRM</h1>
+            <p>Depois da triagem, cada NIP sobe para a fila da área no CRM de relacionamento. O envio automático roda todo dia útil às 6h.</p>
+          </div>
+        </div>
+
+        <section class="card card--flush" aria-labelledby="prontas-titulo">
+          <div class="table-toolbar">
+            <div>
+              <h2 id="prontas-titulo">Prontas para enviar</h2>
+              <p id="prontas-total"></p>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn--primary btn--sm" id="enviar" type="button" disabled><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-send"/></svg> Enviar agora</button>
+            </div>
+          </div>
+          <div id="prontas"></div>
+        </section>
+
+        <section class="card card--flush" aria-labelledby="falhas-titulo">
+          <div class="table-toolbar">
+            <div>
+              <h2 id="falhas-titulo">Não subiram para o CRM</h2>
+              <p>Corrija o que travou o envio e mande de novo.</p>
+            </div>
+          </div>
+          <div id="falhas"></div>
+        </section>
+
+        <section class="card card--flush" aria-labelledby="lotes-titulo">
+          <div class="table-toolbar">
+            <div>
+              <h2 id="lotes-titulo">Histórico de envios</h2>
+              <p id="lotes-total"></p>
+            </div>
+            <div class="btn-row">
+              <label class="visually-hidden" for="lotes-origem">Mostrar envios</label>
+              <select class="select" id="lotes-origem">
+                <option value="">Automáticos e manuais</option>
+                <option value="Automática">Só automáticos</option>
+                <option value="Manual">Só manuais</option>
+              </select>
+            </div>
+          </div>
+          <div id="lotes"></div>
+        </section>
+      </main>
+
+      <footer class="app-footer"></footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/envios.js"></script>
+  </body>
+</html>

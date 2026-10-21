@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#1b0f2b">
+    <meta name="description" content="Case de UX/UI: triagem das NIPs da ANS na operadora fictícia Acolhe Saúde.">
+    <title>Entrar | Triagem NIP</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#login-form">Pular para o formulário de acesso</a>
+
+    <div class="login">
+      <main class="login__panel" id="conteudo">
+        <form class="login__form" id="login-form" novalidate>
+          <div class="login__brand">
+            <img src="img/favicon.svg" alt="" width="44" height="44">
+            <span><strong>Triagem NIP</strong><small>Acolhe Saúde</small></span>
+          </div>
+          <span class="eyebrow">Acesso restrito</span>
+          <h1>Bom te ver de novo</h1>
+          <p>Entre com sua matrícula e senha para abrir a mesa de triagem.</p>
+
+          <div class="login__fields">
+            <div class="field">
+              <label for="login-matricula">Matrícula <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="login-matricula" name="matricula" type="text" autocomplete="username"
+                     maxlength="7" required data-rules="matricula" data-mask="upper" spellcheck="false"
+                     aria-describedby="login-matricula-dica">
+              <p class="hint" id="login-matricula-dica">Uma letra e 6 números, como A230417.</p>
+            </div>
+
+            <div class="field">
+              <label for="login-senha">Senha <span class="req" aria-hidden="true">*</span></label>
+              <div class="login__pass">
+                <input class="input" id="login-senha" name="senha" type="password" autocomplete="current-password"
+                       maxlength="40" required>
+                <button class="btn btn--ghost btn--icon btn--sm" type="button" id="login-ver-senha" aria-pressed="false" aria-label="Mostrar senha">
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-eye"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">
+            Entrar
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-right"/></svg>
+          </button>
+
+          <div class="login__demo">
+            <p><strong>Este é um case de portfólio.</strong> Não existe login de verdade e nada do que você digita sai do seu navegador. Acolhe Saúde é uma operadora fictícia.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="login-demo">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-sparkle"/></svg>
+              Usar o acesso de demonstração
+            </button>
+          </div>
+        </form>
+      </main>
+
+      <section class="login__media" aria-labelledby="login-chamada">
+        <span class="case-tag">Case de UX/UI · 2020</span>
+        <div class="login__art" aria-hidden="true">
+          <div class="login__art-row"><span class="carimbo carimbo--sm"><span><span>41937</span><span>22020</span><span>07150</span><span>48213</span></span></span><strong>Não assistencial</strong></div>
+          <p class="login__art-texto">"Pedi o <mark>reembolso</mark> das sessões de psicologia, mandei a <mark>nota fiscal</mark> e recebi menos da metade do valor."</p>
+          <div class="regua regua--warning">
+            <div class="regua__dias"><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia is-gasto"></span><span class="regua__dia"></span><span class="regua__dia"></span><span class="regua__dia"></span></div>
+            <div class="regua__texto"><span>Prazo da ANS</span><strong>Faltam 3 dias úteis</strong></div>
+          </div>
+          <div class="login__art-rota"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-route"/></svg> Vai para a área de Reembolso</div>
+        </div>
+
+        <h2 id="login-chamada">Cada reclamação na ANS tem prazo. E cada uma tem dono.</h2>
+        <p>As NIPs chegam do portal da agência, ganham tema e área, avisam quem precisa agir e sobem para o CRM, com o relógio do prazo sempre à vista.</p>
+
+        <ul class="login__highlights">
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-clock"/></svg> Prazo em dias úteis, contado desde a notificação</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-search-text"/></svg> Sugestão de área pelas palavras do relato</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-send"/></svg> Aviso por e-mail e envio diário ao CRM</li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5f3696">
+    <meta name="description" content="Cadastro manual e correção de NIPs no sistema Triagem NIP.">
+    <title>Cadastrar NIP | Triagem NIP</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="rail"></div>
+      <header class="appbar"></header>
+
+      <main class="content" id="conteudo" tabindex="-1">
+        <div class="page-head">
+          <div class="page-head__text">
+            <span class="eyebrow" id="pagina-grupo">Operação</span>
+            <h1 id="pagina-titulo">Cadastrar NIP</h1>
+            <div class="muted" id="pagina-descricao">Para quando a NIP não veio na importação. Os campos com * são obrigatórios.</div>
+          </div>
+          <div class="page-head__actions">
+            <a class="btn" id="pagina-voltar" href="triagem.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-left"/></svg> Voltar para a mesa</a>
+          </div>
+        </div>
+
+        <form id="nip-form" novalidate>
+          <div data-summary-anchor></div>
+          <div class="stack" id="nip-secoes"></div>
+
+          <div class="form-actions">
+            <p>Campos com <span class="req">*</span> são obrigatórios.</p>
+            <div class="btn-row">
+              <a class="btn" id="cancelar" href="triagem.html">Cancelar</a>
+              <button class="btn btn--primary" type="submit" id="salvar"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg> Salvar NIP</button>
+            </div>
+          </div>
+        </form>
+      </main>
+
+      <footer class="app-footer"></footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/nip.js"></script>
+  </body>
+</html>

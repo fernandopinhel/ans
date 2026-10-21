@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5f3696">
+    <meta name="description" content="Painel do dia no sistema Triagem NIP.">
+    <title>Painel | Triagem NIP</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="app">
+      <div class="rail"></div>
+      <header class="appbar"></header>
+
+      <main class="content" id="conteudo" tabindex="-1">
+        <div class="painel-hero">
+          <section class="boas-vindas" aria-labelledby="pagina-titulo">
+            <span class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-sparkle"/></svg> Painel do dia</span>
+            <h1 id="pagina-titulo">Olá!</h1>
+            <p id="hero-texto">Veja como estão as NIPs hoje.</p>
+            <div class="btn-row">
+              <a class="btn btn--coral" href="triagem.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-inbox"/></svg> Abrir a mesa de triagem</a>
+              <button class="btn" id="importar" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-cloud-download"/></svg> Buscar novas NIPs na ANS</button>
+            </div>
+          </section>
+
+          <section class="card relogio-card" aria-labelledby="relogio-titulo">
+            <div class="card__head">
+              <div>
+                <h2 id="relogio-titulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-clock"/></svg> Relógio da ANS</h2>
+                <p>NIPs abertas pelo prazo de resposta, contado em dias úteis.</p>
+              </div>
+            </div>
+            <ul class="relogio-grid" id="relogio"></ul>
+          </section>
+        </div>
+
+        <section class="card" aria-labelledby="periodo-titulo">
+          <div class="card__head">
+            <div>
+              <h2 id="periodo-titulo">Números do período</h2>
+              <p id="periodo-texto">Pela data de notificação da ANS.</p>
+            </div>
+          </div>
+          <form id="periodo" class="no-print" novalidate>
+            <div class="form-grid" id="periodo-campos"></div>
+          </form>
+        </section>
+
+        <h2 class="visually-hidden" id="kpis-titulo">Indicadores do período</h2>
+        <ul class="kpis" id="kpis" aria-labelledby="kpis-titulo"></ul>
+
+        <div class="grid-2">
+          <section class="card" aria-labelledby="situacao-titulo">
+            <div class="card__head"><div><h2 id="situacao-titulo">Por situação</h2><p>Onde cada NIP do período está agora.</p></div></div>
+            <ul class="barras" id="por-situacao"></ul>
+          </section>
+          <section class="card" aria-labelledby="categoria-titulo">
+            <div class="card__head"><div><h2 id="categoria-titulo">Por categoria</h2><p>Assistencial tem 5 dias úteis de prazo. Não assistencial, 10.</p></div></div>
+            <ul class="barras" id="por-categoria"></ul>
+          </section>
+          <section class="card" aria-labelledby="tema-titulo">
+            <div class="card__head"><div><h2 id="tema-titulo">Temas que mais aparecem</h2><p>Nível 2, só das NIPs já classificadas.</p></div></div>
+            <ul class="barras barras--accent" id="por-tema"></ul>
+          </section>
+          <section class="card" aria-labelledby="area-titulo">
+            <div class="card__head"><div><h2 id="area-titulo">Por área</h2><p>Para onde as NIPs foram encaminhadas.</p></div></div>
+            <ul class="barras" id="por-area"></ul>
+          </section>
+        </div>
+
+        <div class="grid-2">
+          <section class="card" aria-labelledby="urgentes-titulo">
+            <div class="card__head">
+              <div><h2 id="urgentes-titulo">Vencem primeiro</h2><p>As NIPs abertas com o prazo mais curto.</p></div>
+              <a href="triagem.html?prazo=urgente">Ver na mesa</a>
+            </div>
+            <div id="urgentes"></div>
+          </section>
+          <section class="card" aria-labelledby="fluxo-titulo">
+            <div class="card__head"><div><h2 id="fluxo-titulo">O caminho de uma NIP</h2><p>Cada passo fica no histórico, com quem fez e quando.</p></div></div>
+            <ol class="fluxo">
+              <li><strong>Chega da ANS</strong><span>A importação traz o relato e os dados do beneficiário.</span></li>
+              <li><strong>Triagem</strong><span>Tema em 3 níveis e a área sugerida pelas regras.</span></li>
+              <li><strong>Aviso e CRM</strong><span>A área recebe o e-mail e a NIP sobe para a fila dela.</span></li>
+              <li><strong>Resposta</strong><span>A resposta à ANS sai antes do prazo terminar.</span></li>
+            </ol>
+          </section>
+        </div>
+      </main>
+
+      <footer class="app-footer"></footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/inicio.js"></script>
+  </body>
+</html>
