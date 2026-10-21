@@ -98,7 +98,7 @@
       ['inbox', 'NIPs recebidas', G.fmt.int(nips.length), G.fmt.plural(nips.filter((n) => n.origem === 'Manual').length, 'cadastrada à mão', 'cadastradas à mão')],
       ['alert', 'Chegaram com problema', G.fmt.int(comProblema), nips.length ? G.fmt.pct(comProblema / nips.length) + ' das importações' : 'Nenhuma no período'],
       ['check-circle', 'Respondidas no prazo', respondidas.length ? G.fmt.pct(noPrazo / respondidas.length) : 'Sem respostas', G.fmt.plural(noPrazo, 'de ', 'de ') + respondidas.length + ' respondidas'],
-      ['clock', 'Tempo médio de resposta', tempos.length ? medio.toFixed(1).replace('.', ',').replace(/,0$/, '') + ' dias úteis' : 'Sem respostas', 'Da notificação até a resposta'],
+      ['clock', 'Tempo médio de resposta', tempos.length ? medio.toFixed(1).replace('.', ',').replace(/,0$/, '') : 'Sem respostas', 'Dias úteis, da notificação até a resposta'],
       ['flag', 'Abertas e em atraso', G.fmt.int(atrasadas), atrasadas ? 'Precisam de resposta hoje' : 'Tudo dentro do prazo']
     ];
     document.getElementById('kpis').replaceChildren(...kpis.map((k) => h('li', { class: 'kpi' },
